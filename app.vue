@@ -13,8 +13,8 @@
       route: '/skills'
     },
     {
-      title: 'companies',
-      route: '/companies'
+      title: 'contacts',
+      route: '/contacts'
     },
   ]
 </script>
@@ -45,7 +45,7 @@
           </div>
         </div>
         <div class="relative">
-          <TheFooter />
+          <!-- <TheFooter /> -->
         </div>
       </div>
     </div>

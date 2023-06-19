@@ -5,6 +5,9 @@ export default <Partial<Config>>{
     extend: {
       colors: {
         primary: '#FF2B51'
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       }
     }
   },

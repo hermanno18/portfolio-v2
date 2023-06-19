@@ -5,7 +5,7 @@
       skils: [
         {
           title: 'Nuxt JS',
-          imgSRC: 'https://www.svgrepo.com/show/452130/vue.svg',
+          imgSRC: 'https://www.svgrepo.com/show/354131/nuxt-icon.svg',
           percentage: 100,
           color: '#41B883'
         },
@@ -17,57 +17,57 @@
         },
         {
           title: 'React JS',
-          imgSRC: 'https://www.svgrepo.com/show/452130/vue.svg',
+          imgSRC: 'https://www.svgrepo.com/show/355190/reactjs.svg',
           percentage: 100,
-          color: '#41B883'
+          color: '#00D8FF'
         },
         {
           title: 'JavaScript',
-          imgSRC: 'https://www.svgrepo.com/show/452130/vue.svg',
+          imgSRC: 'https://www.svgrepo.com/show/303206/javascript-logo.svg',
           percentage: 100,
-          color: '#41B883'
+          color: '#F7DF1E'
         },
         {
           title: 'TypeScript',
-          imgSRC: 'https://www.svgrepo.com/show/452130/vue.svg',
+          imgSRC: 'https://www.svgrepo.com/show/354478/typescript-icon.svg',
           percentage: 100,
-          color: '#41B883'
+          color: '#007ACC'
+        },
+        {
+          title: 'Tree JS',
+          imgSRC: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Three.js_Icon.svg/512px-Three.js_Icon.svg.png?20211115112438',
+          percentage: 100,
+          color: '#000000'
         },
         {
           title: 'TailwindCSS',
-          imgSRC: 'https://www.svgrepo.com/show/452130/vue.svg',
+          imgSRC: 'https://www.svgrepo.com/show/354431/tailwindcss-icon.svg',
           percentage: 100,
-          color: '#41B883'
+          color: '#16BDB8'
         },
         {
           title: 'SASS',
-          imgSRC: 'https://www.svgrepo.com/show/452130/vue.svg',
+          imgSRC: 'https://www.svgrepo.com/show/374061/sass.svg',
           percentage: 100,
-          color: '#41B883'
+          color: '#CD6799'
         },
         {
           title: 'Laravel',
-          imgSRC: 'https://www.svgrepo.com/show/452130/vue.svg',
+          imgSRC: 'https://www.svgrepo.com/show/353985/laravel.svg',
           percentage: 100,
-          color: '#41B883'
+          color: '#FF2D20'
         },
         {
           title: 'Django',
-          imgSRC: 'https://www.svgrepo.com/show/452130/vue.svg',
+          imgSRC: 'https://www.svgrepo.com/show/353657/django-icon.svg',
           percentage: 100,
-          color: '#41B883'
+          color: '#092E20'
         },
         {
           title: 'Wordpress',
-          imgSRC: 'https://www.svgrepo.com/show/452130/vue.svg',
+          imgSRC: 'https://www.svgrepo.com/show/452136/wordpress.svg',
           percentage: 100,
-          color: '#41B883'
-        },
-        {
-          title: 'Wordpress',
-          imgSRC: 'https://www.svgrepo.com/show/452130/vue.svg',
-          percentage: 100,
-          color: '#41B883'
+          color: '#028CB0'
         },
       ]
     },
@@ -81,10 +81,16 @@
           color: '#00D8FF'
         },
         {
-          title: 'IONIC',
-          imgSRC: 'https://www.svgrepo.com/show/355190/reactjs.svg',
+          title: 'Ionic',
+          imgSRC: 'https://www.svgrepo.com/show/353912/ionic-icon.svg',
           percentage: 100,
-          color: '#00D8FF'
+          color: '#3880FF'
+        },
+        {
+          title: 'Quasar',
+          imgSRC: 'https://www.svgrepo.com/show/374024/quasar.svg',
+          percentage: 100,
+          color: '#1976D2'
         },
       ]
     },
@@ -93,15 +99,67 @@
       skils: [
         {
           title: 'Vercel',
-          imgSRC: 'https://www.svgrepo.com/show/355190/reactjs.svg',
+          imgSRC: 'https://www.svgrepo.com/show/354513/vercel-icon.svg',
           percentage: 100,
-          color: '#00D8FF'
+          color: '#000'
         },
         {
           title: 'Azure',
-          imgSRC: 'https://www.svgrepo.com/show/355190/reactjs.svg',
+          imgSRC: 'https://www.svgrepo.com/show/448271/azure-devops.svg',
           percentage: 100,
-          color: '#00D8FF'
+          color: '#2588DF'
+        },
+      ]
+    },
+    {
+      title: 'Design',
+      skils: [
+        {
+          title: 'Figma',
+          imgSRC: 'https://www.svgrepo.com/show/452202/figma.svg',
+          percentage: 100,
+          color: '#A259FF'
+        },
+        {
+          title: 'canva',
+          imgSRC: 'https://www.svgrepo.com/show/305835/canva.svg',
+          percentage: 100,
+          color: '#000'
+        },
+        {
+          title: 'photoshop',
+          imgSRC: 'https://www.svgrepo.com/show/167746/photoshop.svg',
+          percentage: 100,
+          color: '#393687'
+        },
+      ]
+    },
+    {
+      title: 'Others',
+      skils: [
+        {
+          title: 'Git',
+          imgSRC: 'https://www.svgrepo.com/show/452210/git.svg',
+          percentage: 100,
+          color: '#EE513B'
+        },
+        {
+          title: 'Firebase',
+          imgSRC: 'https://www.svgrepo.com/show/373595/firebase.svg',
+          percentage: 100,
+          color: '#f4b81f'
+        },
+        {
+          title: 'Trello',
+          imgSRC: 'https://www.svgrepo.com/show/354463/trello.svg',
+          percentage: 100,
+          color: '#007CC3'
+        },
+        {
+          title: 'Adobe Premiere Pro',
+          imgSRC: 'https://www.svgrepo.com/show/452150/adobe-premiere.svg',
+          percentage: 100,
+          color: '#00005B'
         },
       ]
     }

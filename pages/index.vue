@@ -2,7 +2,10 @@
   <div  class="h-full w-full flex items-center justify-center text-center">
     <div class="absolute -z-[1] ">
       <div class="spinner h-[500px] w-[500px] rounded-full">
-        <div class="spinner1 bg-gray-800 h-[500px] w-[500px] rounded-full"></div>
+        <div class=" bg-gray-800  h-[500px] w-[500px] rounded-full relative">
+          <img src="/img/video-bg-1.png" alt="" class="absolute  h-full w-ful opacity-50">
+          <div class="absolute h-full w-full  rounded-full" style=" background: rgba(31, 41, 55, 1.0); background: radial-gradient(at center, rgba(31, 41, 55, 1.0) 30%, rgba(31, 41, 55, 0.7), rgba(31, 41, 55, 1.0), rgba(255, 255, 255, 0.0));"></div>
+        </div>
       </div>
     </div>
     <div>
