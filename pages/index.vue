@@ -1,8 +1,8 @@
 <template>
-  <div  class="h-full w-full flex items-center justify-center text-center">
-    <div class="absolute -z-[1] ">
-      <div class="spinner h-[500px] w-[500px] rounded-full">
-        <div class=" bg-gray-800  h-[500px] w-[500px] rounded-full relative">
+  <div  class="h-full w-full flex items-center justify-center text-center  overflow-hidden">
+    <div class="absolute -z-[1]  ">
+      <div class="spinner h-[300px] w-[300px]  md:h-[500px] md:w-[500px] rounded-full overflow-hidden">
+        <div class=" bg-gray-800  h-[300px] w-[300px]  md:h-[500px] md:w-[500px] rounded-full relative overflow-hidden">
           <img src="/img/video-bg-1.png" alt="" class="absolute  h-full w-ful opacity-50">
           <div class="absolute h-full w-full  rounded-full" style=" background: rgba(31, 41, 55, 1.0); background: radial-gradient(at center, rgba(31, 41, 55, 1.0) 30%, rgba(31, 41, 55, 0.7), rgba(31, 41, 55, 1.0), rgba(255, 255, 255, 0.0));"></div>
         </div>
@@ -15,8 +15,8 @@
             Hi !  🙃
           </p>
           <p>I'm <span class="text-info">Hermann FOKOU</span>,</p>
-          <p class=" mt-3 text-lg">a passionate about WEB developement and I.T. </p>
-          <p class="-3 text-lg ">Welcome on my portfolio</p>
+          <p class=" mt-3 text-xl sm:text-lg">a passionate about WEB <br class=sm:hidden> developement and I.T. </p>
+          <p class="-3 text-base sm:text-lg ">Welcome on my portfolio</p>
           <p></p>
         </div>
         <div class="relative flex justify-center pt-4">

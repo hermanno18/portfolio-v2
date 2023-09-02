@@ -166,10 +166,10 @@
   ]
 </script>
 <template>
-  <div class="w-full h-full container mx-auto">
+  <div class="w-full h-full container mx-auto ">
     <div
       v-for="domain in domains"
-      class="mt-20"
+      class="mt-14 md:mt-20"
     >
       <h2 class=" uppercase text-lg"><span class="text-primary">#</span> {{ domain.title }}</h2>
       <div class="divider my-4"></div>
@@ -179,7 +179,7 @@
           class="cursor-pointer skill group "  
         >
           <div class="avatar mx-auto block transition-all ">
-            <div class="w-24 mask mask-squircle p-1  group-hover:mask-hexagon-2 group-hover:rotate-180  transition-all duration-500 ease-in-out" :style="`background-color: ${skill.color}`">
+            <div class="w-16 md:w-24 mask mask-squircle p-1  group-hover:mask-hexagon-2 group-hover:rotate-180  transition-all duration-500 ease-in-out" :style="`background-color: ${skill.color}`">
               <div class="mask mask-squircle bg-white  bg-opacity-70 p-3  group-hover:p-4  group-hover:mask-hexagon-2 transition-all duration-500 ease-in-out ">
                 <img :src="skill.imgSRC" class=" group-hover:-rotate-180 transition-all duration-500 ease-in-out "/>
               </div>

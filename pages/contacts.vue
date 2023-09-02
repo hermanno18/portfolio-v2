@@ -2,18 +2,43 @@
 const contacts = ref([
   {
     title: "Appel",
-    icon: "",
+    icon: "material-symbols:phone-in-talk",
+    action: ()=> 'tel:+237699167012',
     value: "699167012",
   },
   {
     title: "whatsapp",
-    icon: "",
+    action: ()=> 'https://wa.me/237699167012',
+    icon: "ri:whatsapp-fill",
     value: "699167012"
   },
   {
     title: "Email",
-    icon: "",
+    action: ()=> 'mailto:hermann18pavel@gmailcom',
+    icon: "bi:envelope-at-fill",
     value: "hermann18pavel@gmail.com"
+  },
+])
+const socials = ref([
+{
+    title:'LinkedIn',
+    link:'https://www.linkedin.com/in/hermann-fokou',
+    icon: 'bi:linkedin'
+  },
+  {
+    title:'GitHub',
+    link:'https://github.com/hermanno18',
+    icon: 'bi:github'
+  },
+  {
+    title:'Figma',
+    link:'https://www.figma.com/@hermannfokou',
+    icon: 'fa6-brands:figma'
+  },
+  {
+    title:'Telegram',
+    link:'https://t.me/hermanno18',
+    icon: 'bx:bxl-telegram'
   },
 ])
 </script>
@@ -28,24 +53,24 @@ const contacts = ref([
           </div>
         </div>
       </div>
-      <div class="divider"><span class="text-base text-primary">Restons en contact</span></div>
+      <div class="divider"><span class="text-base text-primary">Keep in touch ! </span></div>
       <div class="w-full flex flex-wrap items-center justify-around mt-20 ">
-        <div v-for="contact in contacts" class="group border border-primry overflow-hidden flex gap-3 hover:gap-0 p-2 rounded-full items-center cursor-pointer transition-all duration-500 ease-in-out w-[250px] ">
+        <a :href="contact.action()" target="_blank" v-for="contact in contacts" class="group border border-primry overflow-hidden flex gap-3 hover:gap-0 p-2 rounded-full items-center cursor-pointer transition-all duration-500 ease-in-out w-[250px] ">
           <div class="bg-white  group-hover:flex-1 transition-all duration-500 ease-in-out flex items-center justify-center p-2 rounded-full ">
-            <Icon name="uil:linkedin" class="text-2xl group-hover:rotate-[360deg] duration-300 text-gray-800" />
+            <Icon :name="contact.icon" class="text-2xl group-hover:rotate-[360deg] duration-300 text-gray-800 group-hover:text-primary" />
           </div>
           <div class=" w-0 group-hover:opacity-0 transition-all duration-500 ease-in-out flex flex-col">
             <span class="text-lg">{{ contact.title }}</span>
             <span class="text-xs">{{ contact.value }}</span>
           </div>
-        </div>
+        </a>
       </div>
       <div class="mt-20" >
         <p class="text-base text-center ">Or folow me on my socials</p>
         <div class="text-center mt-5 gap-4 flex justify-center flex-wrap items-center overflow-y-hidden ">
-          <div v-for="i in 6" class="group bg-white bg-opacity-80 w-12 aspect-square rounded-full flex items-center justify-center cursor-pointer hover:bg-opacity-100  transition-all duration-500 ease-in-out">
-            <Icon name="uil:linkedin" class="text-2xl group-hover:rotate-[360deg] group-hover:text-3xl text-gray-800 group-hover:text-primary transition-all duration-500 ease-in-out" />
-          </div>
+          <a :href="social.link" target="_blank" :title="social.title" v-for="social in socials" class="group bg-white bg-opacity-80 w-12 aspect-square rounded-full flex items-center justify-center cursor-pointer hover:bg-opacity-100  transition-all duration-500 ease-in-out">
+            <Icon :name="social.icon" class="text-2xl group-hover:rotate-[360deg] group-hover:text-3xl text-gray-800 group-hover:text-primary transition-all duration-500 ease-in-out" />
+          </a>
         </div>
       </div>
     </div>
