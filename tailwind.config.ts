@@ -4,7 +4,7 @@ export default <Partial<Config>>{
   theme: {
     extend: {
       colors: {
-        primary: '#FF2B51'
+        primary: '#FF2B51' 
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -28,7 +28,7 @@ export default <Partial<Config>>{
       {
         mytheme: {
           "primary": "#FF2B51",
-          "secondary": "#D926AA",
+          "secondary": "#00e1ff",
           "accent": "#1FB2A5",
           "neutral": "#191D24",
           "base-100": "#2A303C",

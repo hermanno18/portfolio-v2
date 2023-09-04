@@ -9,24 +9,29 @@
       <div class="divider mb-9"><span class="text-base text-primary">a propos de moi</span></div>
       <div class="text-lg text-start grid md:grid-cols-2 gap-9">
         <div class="">
-          <h4 class="text-2xl text-primary mb-2">Un titre sur moi</h4>
+          <h4 class="text-2xl text-primary mb-2">Hermann FOKOU</h4>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur voluptatem neque provident consectetur corporis reiciendis, et expedita! Modi fugit aliquam optio omnis eligendi. Eos labore ab officiis qui voluptatem voluptatum.
+            Amoureux de l’informatique,  l'ingénieur de travaux en génie Logiciel que je suis s'est dévoué à l’apprentissage et  à la retransmission de ce qu'il apprend. Notamment dans le développement WEB, la technologie, mais aussi les sciences en général. 
+          </p>
+          <p class="mt-5 text-sm ">
+            <a href="" class=" hover:text-primary italic hover:underline transition-all duration-150 group">
+              <span>Découvrez mon parcours profféssionel</span>
+              <span class="ml-3"><Icon name="material-symbols:arrow-forward" class="text-sm group-hover:rotate-[360deg] duration-300 text-primary group-hover:text-white  group-hover:bg-primary rounded-full" /></span></a>
           </p>
         </div>
 
         <div class="">
-          <h4 class="text-2xl text-primary mb-2">Un titre sur moi</h4>
+          <h4 class="text-2xl text-primary mb-2">Hermanno_18</h4>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur voluptatem neque provident consectetur corporis reiciendis, et expedita! Modi fugit aliquam optio omnis eligendi. Eos labore ab officiis qui voluptatem voluptatum.
+            La caricature parfaite du Geek qui  passe 25h par jour sur sa machine, mes passions pour le code finissent souvent par m'emporter, et mon imagination plus que débordante me fait me lancer dans des projets tous plus farlelus les uns que les autres. 
+          </p>
+          <p class="mt-5 text-sm ">
+            <a href="" class=" hover:text-primary italic hover:underline transition-all duration-150 group">
+              <span>Découvrez mes projets communautaires</span>
+              <span class="ml-3"><Icon name="material-symbols:arrow-forward" class="text-sm group-hover:rotate-[360deg] duration-300 text-primary group-hover:text-white  group-hover:bg-primary rounded-full" /></span></a>
           </p>
         </div>
       </div>
-      <p class="mt-9 text-lg hidden md:block">
-        <div class="text-lg">
-          <nuxt-link to="/" >Home</nuxt-link>
-        </div>
-      </p>
     </div>
   </div>
 </template>

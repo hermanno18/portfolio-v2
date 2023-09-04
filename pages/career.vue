@@ -1,4 +1,5 @@
 <script setup>
+import Career from '@/components/parts/Career.vue'
   const domains = [
     {
       title: 'WEB DEVeloppement',
@@ -164,30 +165,136 @@
       ]
     }
   ]
+  const careers = [
+    {
+      company_id: 0,
+      start_date: new Date('2020-01'),
+      end_date: null,
+      occupation: 'FullStack Developper',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, quas mollitia vel, ipsa numquam perspiciatis ipsam quod enim dolore fugiat sapiente officiis velit inventore quasi reprehenderit quisquam? Voluptates, maiores deleniti', 
+      location:'remote',
+      tools: [
+        {
+          title: 'vueJS'
+        },
+        {
+          title: 'PHP'
+        },
+        {
+          title: 'CSS'
+        },
+      ],
+      projects: [
+        {
+          title: 'PayCat'
+        },
+        {
+          title: 'Ticket-Vivi'
+        },
+        {
+          title: 'Nosilab'
+        },
+      ],
+    },
+    {
+      company_id: 1,
+      start_date: new Date('2022-01'),
+      end_date: new Date('2022-07'),
+      occupation: 'FullStack Developper',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, quas mollitia vel, ipsa numquam perspiciatis ipsam quod enim dolore fugiat sapiente officiis velit inventore quasi reprehenderit quisquam? Voluptates, maiores deleniti', 
+      location:'remote',
+      tools: [
+        {
+          title: 'vueJS'
+        },
+        {
+          title: 'PHP'
+        },
+        {
+          title: 'CSS'
+        },
+      ],
+      projects: [
+        {
+          title: 'PayCat'
+        },
+        {
+          title: 'Ticket-Vivi'
+        },
+        {
+          title: 'Nosilab'
+        },
+      ],
+    },
+    {
+      company_id: 2,
+      start_date: new Date('2022-07'),
+      end_date: null,
+      occupation: 'FullStack Developper',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, quas mollitia vel, ipsa numquam perspiciatis ipsam quod enim dolore fugiat sapiente officiis velit inventore quasi reprehenderit quisquam? Voluptates, maiores deleniti', 
+      location:'remote',
+      tools: [
+        {
+          title: 'vueJS'
+        },
+        {
+          title: 'PHP'
+        },
+        {
+          title: 'CSS'
+        },
+      ],
+      projects: [
+        {
+          title: 'PayCat'
+        },
+        {
+          title: 'Ticket-Vivi'
+        },
+        {
+          title: 'Nosilab'
+        },
+      ],
+    },
+  ]
+  careers.sort((a,b)=> b.start_date - a.start_date)
+  const companies = [
+    {
+      title: 'FreeLance',
+      site: null,
+      location: 'Remote',
+      id:0
+    },
+    {
+      title: 'Gohze',
+      location: 'Yaounde, Cameroon',
+      site: null,
+      id:1
+    },
+    {
+      title: 'I.T Solutions & Advisory',
+      location: 'Yaounde, Cameroon',
+      site: null,
+      id:2
+    },
+
+  ]
+
+  const findCompanyByID = id => {
+    return companies.find(e=>e.id == id)
+  }
 </script>
 <template>
   <div class="wh-full container mx-auto ">
-    <div
-      v-for="domain in domains"
-      class="mt-14 md:mt-20"
+    <template
+      v-for="(career, i) in careers"
+      class="pt-20"
     >
-      <h2 class=" uppercase text-lg"><span class="text-primary">#</span> {{ domain.title }}</h2>
-      <div class="divider my-4"></div>
-      <div class="text-center flex gap-12 flex-wrap">
-        <div 
-          v-for="skill in domain.skils"
-          class="cursor-pointer skill group "  
-        >
-          <div class="avatar block transition-all ">
-            <div class="overflow-hidden w-16 md:w-24 mask mask-squircle p-1  group-hover:mask-hexagon-2 group-hover:rotate-180  transition-all duration-500 ease-in-out" :style="`background-color: ${skill.color}`">
-              <div class="mask mask-squircle bg-white  bg-opacity-70 p-3  group-hover:p-4  group-hover:mask-hexagon-2 transition-all duration-500 ease-in-out ">
-                <img :src="skill.imgSRC" class=" group-hover:-rotate-180 transition-all duration-500 ease-in-out "/>
-              </div>
-            </div>
-          </div>
-          <span class="capitalize text-sm">{{ skill.title }}</span>
-        </div>
-      </div>
-    </div>
+      <Career
+        class="mb-40" 
+        :career="career" 
+        :company="findCompanyByID(career.company_id)"
+      />
+    </template>
   </div>
 </template>

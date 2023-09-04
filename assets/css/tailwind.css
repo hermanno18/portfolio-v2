@@ -6,3 +6,24 @@
 *{
   font-family: 'Reem Kufi'
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-gray-800
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-600;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}

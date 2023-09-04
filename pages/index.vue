@@ -34,7 +34,7 @@
 
 <style scoped>
 .spinner {
-  background-image: -webkit-gradient(linear,left top, left bottom,color-stop(35%, #FF2B51),to(rgb(0, 225, 255)));
+  background-image: -webkit-gradient(linear,left top, left bottom,color-stop(35%, #FF2B51),to(#00e1ff));
   background-image: linear-gradient(#FF2B51 35%,rgb(0, 225, 255));
   -webkit-animation: spinning82341 4s linear infinite;
           animation: spinning82341 4s linear infinite;
