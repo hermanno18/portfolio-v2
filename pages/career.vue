@@ -311,7 +311,7 @@ import Career from '@/components/parts/Career.vue'
   }
 </script>
 <template>
-  <div class="wh-full container mx-auto ">
+  <div class="wh-full container mx-auto px-5 lg:px-10 ">
     <template
       v-for="(career, i) in careers"
       class="pt-20"

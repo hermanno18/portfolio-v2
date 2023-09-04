@@ -44,7 +44,7 @@ const socials = ref([
 </script>
 
 <template>
-  <div class="w-full h-full flex items-center justify-center">
+  <div class="w-full h-full py-10 flex items-center justify-center">
     <div class="w-[70%]">
       <div class="items-center flex justify-center">
         <div class="avatar m-auto">
@@ -54,7 +54,7 @@ const socials = ref([
         </div>
       </div>
       <div class="divider"><span class="text-base text-primary">Keep in touch ! </span></div>
-      <div class="w-full flex flex-wrap items-center justify-around mt-20 ">
+      <div class="w-full flex flex-wrap gap-y-8 items-center justify-around mt-20 ">
         <a :href="contact.action()" target="_blank" v-for="contact in contacts" class="group border border-primry overflow-hidden flex gap-3 hover:gap-0 p-2 rounded-full items-center cursor-pointer transition-all duration-500 ease-in-out w-[250px] ">
           <div class="bg-white  group-hover:flex-1 transition-all duration-500 ease-in-out flex items-center justify-center p-2 rounded-full ">
             <Icon :name="contact.icon" class="text-2xl group-hover:rotate-[360deg] duration-300 text-gray-800 group-hover:text-primary" />
@@ -67,7 +67,7 @@ const socials = ref([
       </div>
       <div class="mt-20" >
         <p class="text-base text-center ">Or folow me on my socials</p>
-        <div class="text-center mt-5 gap-4 flex justify-center flex-wrap items-center overflow-y-hidden ">
+        <div class="text-center mt-5 gap-4 flex justify-center flex-wrap items-center  ">
           <a :href="social.link" target="_blank" :title="social.title" v-for="social in socials" class="group bg-white bg-opacity-80 w-12 aspect-square rounded-full flex items-center justify-center cursor-pointer hover:bg-opacity-100  transition-all duration-500 ease-in-out">
             <Icon :name="social.icon" class="text-2xl group-hover:rotate-[360deg] group-hover:text-3xl text-gray-800 group-hover:text-primary transition-all duration-500 ease-in-out" />
           </a>

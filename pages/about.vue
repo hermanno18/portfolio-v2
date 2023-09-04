@@ -7,7 +7,7 @@
         </div>
       </div>
       <div class="divider mb-9"><span class="text-base text-primary">About Me</span></div>
-      <div class="text-lg text-start grid md:grid-cols-2 gap-9">
+      <div class="text-lg text-start grid xl:grid-cols-2 gap-9">
         <div class="">
           <h4 class="text-2xl text-primary mb-2">Hermann FOKOU</h4>
           <p>

@@ -4,11 +4,13 @@
 
 
 *{
-  font-family: 'Reem Kufi'
+  font-family: 'Reem Kufi';
+  /* outline: 1px solid red; */
 }
 
 html {
   scroll-behavior: smooth;
+  font-optical-sizing: auto;
 }
 
 /* width */
@@ -30,4 +32,8 @@ html {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-primary;
+}
+
+.h-input {
+  @apply  bg-gray-800 border !border-opacity-10 rounded-full  outline-none px-4 py-1 text-base  
 }

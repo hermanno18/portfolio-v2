@@ -1,5 +1,5 @@
 <template>
-  <div  class="h-full w-full flex items-center justify-center text-center  overflow-hidden">
+  <div  class=" fixed top-0 left-0 h-screen w-screen flex items-center justify-center text-center  overflow-hidden">
     <div class="absolute -z-[1]  ">
       <div class="spinner h-[300px] w-[300px]  md:h-[500px] md:w-[500px] rounded-full overflow-hidden">
         <div class=" bg-gray-800  h-[300px] w-[300px]  md:h-[500px] md:w-[500px] rounded-full relative overflow-hidden">

@@ -166,7 +166,7 @@
   ]
 </script>
 <template>
-  <div class="wh-full container mx-auto ">
+  <div class="wh-full container mx-auto pb-20 px-5 lg:px-10">
     <div
       v-for="domain in domains"
       class="mt-14 md:mt-20"
@@ -178,7 +178,7 @@
           v-for="skill in domain.skils"
           class="cursor-pointer skill group "  
         >
-          <div class="avatar block transition-all ">
+          <div class="avatar block transition-all mx-auto">
             <div class="overflow-hidden w-16 md:w-24 mask mask-squircle p-1  group-hover:mask-hexagon-2 group-hover:rotate-180  transition-all duration-500 ease-in-out" :style="`background-color: ${skill.color}`">
               <div class="mask mask-squircle bg-white  bg-opacity-70 p-3  group-hover:p-4  group-hover:mask-hexagon-2 transition-all duration-500 ease-in-out ">
                 <img :src="skill.imgSRC" class=" group-hover:-rotate-180 transition-all duration-500 ease-in-out "/>

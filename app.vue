@@ -25,7 +25,7 @@
 </script>
 <template>
   <div class="">
-    <div class=" h-screen w-screen p-3 md:p-6 text-2xl">
+    <div class=" h-screen w-screen p-3 md:p-6 text-2xl !overflow-x-hidden">
       <div class="fixed top-0 left-0 -z-[500] h-full w-full bg-gray-800 ">
         <AnimatedBG />
       </div>
@@ -73,7 +73,7 @@
               </nuxt-link>
               <div v-if="key != menuItems.length-1" class="divider divider-horizontal m-0"></div>
             </template>
-          </div>
+          </div> 
         </div>
         <div class="relative">
           
