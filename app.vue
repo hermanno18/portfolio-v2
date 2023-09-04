@@ -2,7 +2,7 @@
   const menuItems = [
     {
       title: 'about',
-      route: '/about'
+      route: 'about'
     },
     {
       title: 'Career',

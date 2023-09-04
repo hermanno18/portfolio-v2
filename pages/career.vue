@@ -238,22 +238,48 @@ import Career from '@/components/parts/Career.vue'
           title: 'vueJS'
         },
         {
-          title: 'PHP'
+          title: 'Javascript'
         },
         {
           title: 'CSS'
         },
+        {
+          title: 'Sass'
+        },
+        {
+          title: 'Wordpress'
+        },
+        {
+          title: 'Azure'
+        },
+        {
+          title: 'Vercel'
+        },
+        {
+          title: 'Git'
+        },
+        {
+          title: 'FireBase'
+        },
       ],
       projects: [
         {
-          title: 'PayCat'
+          title: 'Instapay',
+          thumbnail: 'https://www.svgrepo.com/show/355190/reactjs.svg'
         },
         {
-          title: 'Ticket-Vivi'
+          title: 'Cash-Collector',
+          thumbnail: 'https://www.svgrepo.com/show/373595/firebase.svg'
         },
         {
-          title: 'Nosilab'
+          title: 'Spideli',
+          thumbnail: 'https://www.svgrepo.com/show/452202/figma.svg'
         },
+        {
+          title: 'Quickei',
+          thumbnail: 'https://www.svgrepo.com/show/452202/figma.svg'
+        },
+        
       ],
     },
   ]
