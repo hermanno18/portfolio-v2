@@ -1,5 +1,47 @@
+<script setup>
+const socials = ref([
+{
+    title:'LinkedIn',
+    link:'https://www.linkedin.com/in/hermann-fokou',
+    icon: 'bi:linkedin'
+  },
+  {
+    title:'GitHub',
+    link:'https://github.com/hermanno18',
+    icon: 'bi:github'
+  },
+  {
+    title:'Figma',
+    link:'https://www.figma.com/@hermannfokou',
+    icon: 'fa6-brands:figma'
+  },
+  {
+    title:'Telegram',
+    link:'https://t.me/hermanno18',
+    icon: 'bx:bxl-telegram'
+  },
+])
+</script>
 <template>
   <div  class=" fixed top-0 left-0 h-screen w-screen flex items-center justify-center text-center  overflow-hidden">
+    <div class="absolute  md:left-10 bottom-16 ">
+      <div class="text-center gap-4 flex md:flex-col items-center md:-translate-x-[40%]  ">
+        <template
+          v-for="(social, i) in socials"
+        >
+          <a :href="social.link" target="_blank" :title="social.title"  class="shadow group bg-white bg-opacity-80 p-3 aspect-square rounded-full flex items-center justify-center cursor-pointer hover:bg-opacity-100  transition-all duration-500 ease-in-out">
+            <Icon :name="social.icon" class="text-xl group-hover:rotate-[360deg] group-hover:text-2xl text-gray-800 group-hover:text-primary transition-all duration-500 ease-in-out" />
+          </a>
+          <div v-if="i<socials.length-1" class="bg-gray-500 opacity-20 h-5 w-2 rounded-full"></div>
+        </template>
+      </div>
+    </div>
+    <div class="absolute w-2 h-2 rounded-full bg-gray-500 left-10 bottom-10 hidden md:block "></div>
+    <div class="absolute gap-4 left-16 bottom-10 items-center translate-y-[40%] hidden md:flex">
+      <!-- <div class="bg-gray-500 opacity-20 w-5 h-2 rounded-full"></div> -->
+      <div class="text-sm">Ce syte te plait ? <span class="text-secondary">Contactes-moi pour réaliser le tiens</span>, et plus encore !</div>
+      <div class="bg-gray-500 opacity-20 w-5 h-2 rounded-full"></div>
+    </div>
     <div class="absolute -z-[1]  ">
       <div class="spinner h-[300px] w-[300px]  md:h-[500px] md:w-[500px] rounded-full overflow-hidden">
         <div class=" bg-gray-800  h-[300px] w-[300px]  md:h-[500px] md:w-[500px] rounded-full relative overflow-hidden">
@@ -12,11 +54,11 @@
       <div class="max-w-[450px] maxh-[480px] ">
         <div class="mb-5">
           <p class="mb-5">
-            Hi !  🙃
+            {{ $t('index.hello') }}  🙃
           </p>
-          <p>I'm <span class="text-info">Hermann FOKOU</span>,</p>
-          <p class=" mt-3 text-xl sm:text-lg">a passionate about WEB <br class=sm:hidden> developement and I.T. </p>
-          <p class="-3 text-base sm:text-lg ">Welcome on my portfolio</p>
+          <p>{{ $t('index.im') }} <span class="text-info">Hermann FOKOU</span>,</p>
+          <p class=" mt-3 text-xl sm:text-lg">{{ $t('index.desc') }} <br class=sm:hidden> {{ $t('index.desc2') }}</p>
+          <p class="-3 text-base sm:text-lg ">{{ $t('index.wellcome') }}</p>
           <p></p>
         </div>
         <div class="relative flex justify-center pt-4">

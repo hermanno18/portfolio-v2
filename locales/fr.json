@@ -1,0 +1,18 @@
+{
+  "hello": "Bonjour, {name}!",
+  "language": "Langue",
+  "index":{
+    "hello": "Salut !",
+    "im": "Je suis",
+    "desc": "un passioné de wWEB",
+    "desc2": "developpement et TIC ",
+    "wellcome": "Bienvenue sur mon portfolio"
+  },
+  "menu": {
+    "about": "A propos",
+    "career": "Carière",
+    "works": "Travaux",
+    "skills": "Compétances",
+    "contacts": "contacts"
+  }
+}

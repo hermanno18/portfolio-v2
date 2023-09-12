@@ -29,6 +29,7 @@ export default <Partial<Config>>{
         mytheme: {
           "primary": "#FF2B51",
           "secondary": "#00e1ff",
+          "default" : "#1f2937",
           "accent": "#1FB2A5",
           "neutral": "#191D24",
           "base-100": "#2A303C",
@@ -38,6 +39,7 @@ export default <Partial<Config>>{
           "error": "#F87272",
         },
       },
+      // "winter"
     ],
   },
   plugins: [require('daisyui')],

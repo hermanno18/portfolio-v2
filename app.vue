@@ -1,23 +1,23 @@
 <script setup>
   const menuItems = [
     {
-      title: 'about',
+      title: 'menu.about',
       route: 'about'
     },
     {
-      title: 'Career',
+      title: 'menu.career',
       route: 'career'
     },
     {
-      title: 'Projects',
+      title: 'menu.works',
       route: 'projects'
     },
     {
-      title: 'skills',
+      title: 'menu.skills',
       route: 'skills'
     },
     {
-      title: 'contacts',
+      title: 'menu.contacts',
       route: 'contacts'
     },
   ]
@@ -48,7 +48,7 @@
               :class="route.name == item.route ? 'text-secondary underline underline-offset-8' : ''"
               >
                 <span>
-                  {{ item.title }}
+                  {{ $t(item.title) }}
                 </span>
                  <Icon name="material-symbols:arrow-circle-left-outline" class="text-lg ml-3 text-transparent group-hover:text-primary duration-150 delay-150 transition-all"  />
               </div>

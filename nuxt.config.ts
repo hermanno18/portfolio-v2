@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     'nuxt-icon',
     // '@nuxtjs/i18n'
   ],
+  ssr: false,
 
   //font famili
   googleFonts: {
