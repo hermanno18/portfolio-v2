@@ -97,11 +97,11 @@
           </button>
           <div @click="closeMenu" ref="mobileMenuOverlay" class="fixed bg-primary h-0 w-screen left-0 bottom-0 bg-opacity-30 transition-all duration-500 ">
           </div>
-          <div ref="mobileMenuContainer" class="fixed bg-opacity- left-[50%] -translate-x-[50%] text-base  text-center bg-gray-900  rounded-t-full -bottom-20 w-16 h-16 ease-linear  opacity-0 transition-all duration-500 ">
+          <div ref="mobileMenuContainer" class=" fixed bg-opacity- left-[50%] -translate-x-[50%] text-base  text-center bg-gray-900  rounded-t-full -bottom-20 w-16 h-16 ease-linear  opacity-0 transition-all duration-500 ">
             <nuxt-link @click="closeMenu" to="/" class="pt-4 w-fit mx-auto block hover:text-primary duration-150 delay-150 transition-all">
               <Icon name="material-symbols:other-houses-outline-rounded" class="text-2xl text-center"  />
             </nuxt-link>
-            <div class="grid grid-cols-3 grid-rows-2 py-2 px-3 gap-2 ">
+            <div class="grid grid-cols-3 grid-rows-2 py-2 px-3 gap-2 aspect-[2/1] ">
               <div
                 v-for="(item, i) in menuItems.slice(0,4)"
                 class="flex relative"
