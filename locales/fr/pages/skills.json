@@ -1,0 +1,10 @@
+{
+  "title":"Restons en contact",
+  "titles": {
+    "web-dev": "developpement web",
+    "mob-dev": "developpement Mobile",
+    "devops": "devops",
+    "design": "Conception graphique",
+    "others": "Autres"
+  }
+}

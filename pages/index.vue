@@ -39,7 +39,7 @@ const socials = ref([
     <div class="absolute w-2 h-2 rounded-full bg-gray-500 left-10 bottom-10 hidden md:block "></div>
     <div class="absolute gap-4 left-16 bottom-10 items-center translate-y-[40%] hidden md:flex">
       <!-- <div class="bg-gray-500 opacity-20 w-5 h-2 rounded-full"></div> -->
-      <div class="text-sm">Ce syte te plait ? <span class="text-secondary">Contactes-moi pour réaliser le tiens</span>, et plus encore !</div>
+      <div class="text-sm">{{ $t('index.wondered') }} <span class="text-secondary">{{ $t('index.contact-me') }}</span> {{ $t('index.and-more') }}</div>
       <div class="bg-gray-500 opacity-20 w-5 h-2 rounded-full"></div>
     </div>
     <div class="absolute -z-[1]  ">
@@ -64,11 +64,6 @@ const socials = ref([
         <div class="relative flex justify-center pt-4">
           <div class="scroll-down bottom-0 mt-5"></div>
         </div>
-        <!-- <p>
-          <span>"</span>
-          <span>Il y'a encore un truc à apprendre ! ege er e  dfv fd df </span>
-          <span>"</span>
-        </p> -->
       </div>
     </div>
   </div>

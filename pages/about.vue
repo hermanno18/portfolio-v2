@@ -6,29 +6,25 @@
           <img src="/img/profil.jpg" />
         </div>
       </div>
-      <div class="divider mb-9"><span class="text-base text-primary">About Me</span></div>
+      <div class="divider mb-9"><span class="text-base text-primary capitalize">{{ $t('about.title') }}</span></div>
       <div class="text-lg text-start grid xl:grid-cols-2 gap-9">
         <div class="">
-          <h4 class="text-2xl text-primary mb-2">Hermann FOKOU</h4>
-          <p>
-            Amoureux de l’informatique,  l'ingénieur de travaux en génie Logiciel que je suis s'est dévoué à l’apprentissage et  à la retransmission de ce qu'il apprend. Notamment dans le développement WEB, la technologie, mais aussi les sciences en général. 
-          </p>
+          <h4 class="text-2xl text-primary mb-2">{{ $t('name') }}</h4>
+          <p> {{ $t('about.desc-pro.text') }} </p>
           <p class="mt-5 text-sm ">
             <nuxt-link :to="{name:'career'}" class=" hover:text-primary italic underline underline-offset-4 hover:underline-offset-2 transition-all duration-150 group">
-              <span>Découvrez mon parcours profféssionel</span>
+              <span> {{ $t('about.desc-pro.link') }} </span>
               <span class="ml-3"><Icon name="material-symbols:arrow-forward" class="text-sm group-hover:rotate-[360deg] duration-300 text-primary group-hover:text-white  group-hover:bg-primary rounded-full" /></span>
             </nuxt-link>
           </p>
         </div>
 
         <div class="">
-          <h4 class="text-2xl text-primary mb-2">Hermanno_18</h4>
-          <p>
-            La caricature parfaite du Geek qui  passe 25h par jour sur sa machine, mes passions pour le code finissent souvent par m'emporter, et mon imagination plus que débordante me fait me lancer dans des projets tous plus farlelus les uns que les autres. 
-          </p>
+          <h4 class="text-2xl text-primary mb-2">{{ $t('pseudo') }}</h4>
+          <p> {{ $t('about.desc-geek.text') }} </p>
           <p class="mt-5 text-sm ">
             <a href="" class=" hover:text-primary italic underline underline-offset-4 hover:underline-offset-2 transition-all duration-150 group">
-              <span>Découvrez mes projets communautaires</span>
+              <span> {{ $t('about.desc-geek.link') }} </span>
               <span class="ml-3"><Icon name="material-symbols:arrow-forward" class="text-sm group-hover:rotate-[360deg] duration-300 text-primary group-hover:text-white  group-hover:bg-primary rounded-full" /></span></a>
           </p>
         </div>

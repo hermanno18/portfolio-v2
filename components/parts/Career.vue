@@ -28,7 +28,7 @@
         <h2 class=" uppercase font-semibold"><span class="text-primary">#</span> {{ company.title}} </h2>
         <h2 class="flex-1 text-end text-xs lg:text-base italic flex justify-end">
           <div class=" w-max text-end ">
-            {{ formatDate(career.start_date)}} <span class="mx-2 md:mx-5">-</span> {{ formatDate(career.end_date) || 'Today'}}
+            {{ formatDate(career.start_date, $i18n.locale)}} <span class="mx-2 md:mx-5">-</span> {{ formatDate(career.end_date, $i18n.locale) || $t('time.today')}}
           </div>
         </h2>
       </div>

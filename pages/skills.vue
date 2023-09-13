@@ -1,7 +1,7 @@
 <script setup>
   const domains = [
     {
-      title: 'WEB DEVeloppement',
+      title: 'skills.titles.web-dev',
       skils: [
         {
           title: 'Nuxt JS',
@@ -72,7 +72,7 @@
       ]
     },
     {
-      title: 'Mobile apps DEVeloppement',
+      title: 'skills.titles.mob-dev',
       skils: [
         {
           title: 'React Native',
@@ -95,7 +95,7 @@
       ]
     },
     {
-      title: 'Devops',
+      title: 'skills.titles.devops',
       skils: [
         {
           title: 'Vercel',
@@ -112,7 +112,7 @@
       ]
     },
     {
-      title: 'Design',
+      title: 'skills.titles.design',
       skils: [
         {
           title: 'Figma',
@@ -135,7 +135,7 @@
       ]
     },
     {
-      title: 'Others',
+      title: 'skills.titles.others',
       skils: [
         {
           title: 'Git',
@@ -171,7 +171,7 @@
       v-for="domain in domains"
       class="mt-14 md:mt-20"
     >
-      <h2 class=" uppercase text-lg"><span class="text-primary">#</span> {{ domain.title }}</h2>
+      <h2 class=" uppercase text-lg"><span class="text-primary">#</span> {{ $t(domain.title) }}</h2>
       <div class="divider my-4"></div>
       <div class="text-center flex gap-12 flex-wrap">
         <div 
