@@ -20,7 +20,7 @@
 </script>
 
 <template>
-  <div class="flex justify-between gap-5 items-center z-[500]">
+  <div class="flex justify-between gap-5 items-center z-[500] fixed w-full  bg-transparent backdrop-blur-sm pt-3 md:pt-6">
     <nuxt-link to="/" class="flex">
       {{  }}
       &lt;
