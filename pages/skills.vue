@@ -1,4 +1,6 @@
 <script setup>
+import gsap from "gsap"
+
   const domains = [
     {
       title: 'skills.titles.web-dev',
@@ -164,12 +166,22 @@
       ]
     }
   ]
+
+  onMounted(()=>{
+    gsap.from('.skill', {
+      duration:.4,
+      stagger:0.1,
+      y:-100
+    })
+  })
+
 </script>
 <template>
   <div class="wh-full container mx-auto pb-20 px-5 lg:px-10">
     <div
       v-for="domain in domains"
       class="mt-14 md:mt-20"
+      data-aos="fade-in"
     >
       <h2 class=" uppercase text-lg"><span class="text-primary">#</span> {{ $t(domain.title) }}</h2>
       <div class="divider my-4"></div>

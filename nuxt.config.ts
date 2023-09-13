@@ -20,7 +20,6 @@ export default defineNuxtConfig({
     // '@nuxtjs/i18n'
   ],
   ssr: false,
-
   //font famili
   googleFonts: {
     families: {

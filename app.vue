@@ -62,7 +62,7 @@
       <div class=" h-full w-full flex flex-col relative bg-yello-500">
         <TheHeader />
         <div class="flex-1  flex relative">
-          <div class="w-full h-full">
+          <div class="w-full h-full pt-3 md:pt-6">
             <NuxtPage />
           </div>
           <div class="hidden sticky top-16  h-fit right-0 md:flex flex-col gap-2 uppercase text-xl">
@@ -99,7 +99,7 @@
           </div>
           <div ref="mobileMenuContainer" class=" fixed bg-opacity- left-[50%] -translate-x-[50%] text-base  text-center bg-gray-900  rounded-t-full -bottom-20 w-16 h-16 ease-linear  opacity-0 transition-all duration-500 ">
             <nuxt-link @click="closeMenu" to="/" class="pt-4 w-fit mx-auto block hover:text-primary duration-150 delay-150 transition-all">
-              <Icon name="material-symbols:other-houses-outline-rounded" class="text-2xl text-center"  />
+              <Icon name="material-symbols:other-houses-outline-rounded" class=" text-5xl text-center"  />
             </nuxt-link>
             <div class="grid grid-cols-3 grid-rows-2 py-2 px-3 gap-2 aspect-[2/1] ">
               <div

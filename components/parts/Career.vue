@@ -57,7 +57,7 @@
             >
               <div class="flex w-full overflow-hidden items-center gap-3">
                 <div class="bg-white group-hover:flex-1 duration-300 transition-all p-1 text-center">
-                  <Icon name="fa6-brands:figma" class="text-xl group-hover:rotate-[360deg] duration-300 text-gray-800 group-hover:text-primary" />
+                  <Icon name="tabler:eye" class="text-xl group-hover:rotate-[360deg] duration-300 text-gray-800 group-hover:text-primary" />
                 </div> 
                 <div class="group-hover:opacity-0 group-hover:hidden delay-200 duration-300">{{ project.title }}</div> 
               </div> 

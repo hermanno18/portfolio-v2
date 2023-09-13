@@ -27,6 +27,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.14",
     "daisyui": "^2.51.6",
+    "gsap": "^3.12.2",
     "postcss": "^8.4.24",
     "postcss-color-gray": "^5.0.0"
   }
