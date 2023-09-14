@@ -1,5 +1,7 @@
 {
-  "title":"Restons en contact",
+  "title":"compétances de {name}",
+  "desc": "J'essaye de les faire grandir chaque jours.",
+  "trans-title": "Mes compétances.",
   "titles": {
     "web-dev": "developpement web",
     "mob-dev": "developpement Mobile",

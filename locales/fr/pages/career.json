@@ -1,8 +1,8 @@
 {
-  "title": "à propos de {name}!",
+  "title": "Carière de {name}.",
 
-  "desc": "Curieux, passionné et comique, tout moi !",
-  "trans-title": "Qui suis-je ?",
+  "desc": "Partagée entre profféssion et passion.",
+  "trans-title": "Ma carière.",
   "desc-pro": {
     "text":"Amoureux de l’informatique, l'ingénieur de travaux en génie Logiciel que je suis s'est dévoué à l’apprentissage et à la retransmission de ce qu'il apprend. Notamment dans le développement WEB, la technologie, mais aussi les sciences en général.",
     "link":"Découvrez mon parcours profféssionel"

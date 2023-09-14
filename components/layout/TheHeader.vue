@@ -3,9 +3,11 @@
   const myname = "<HermannFokou />"
   const isLightMode = ref(true)
   const toggleTheme = () => {
-    const body = document.querySelector("html")
-    const theme = isLightMode.value?'winter':'mytheme'
-    body?.setAttribute('data-theme', theme)
+    if(process.client) {
+      const body = document.querySelector("html")
+      const theme = isLightMode.value?'winter':'mytheme'
+      body?.setAttribute('data-theme', theme)
+    }
   }
   const i18nCompLanguages = [
   {

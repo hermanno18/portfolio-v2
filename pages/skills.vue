@@ -1,5 +1,19 @@
 <script setup>
 import gsap from "gsap"
+import { useI18n } from 'vue-i18n';
+
+  const {t} = useI18n()
+
+  useHead({
+    title:  t('skills.title', {name: t('name')}),
+    meta: [
+      { name: 'description', content: 'My amazing site.' }
+    ],
+  })
+  definePageMeta({
+    title: 'skills.trans-title',
+    description: 'skills.desc',
+  });
 
   const domains = [
     {
@@ -171,7 +185,11 @@ import gsap from "gsap"
     gsap.from('.skill', {
       duration:.4,
       stagger:0.1,
-      y:-100
+      y:-100,
+      scrollTrigger: {
+        trigger: ".skill",
+        start: 'top 80%', // Déclenche l'animation lorsque l'élément est à 80% de la vue
+      },
     })
   })
 

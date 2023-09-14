@@ -1,3 +1,18 @@
+<script setup>  
+  import { useI18n } from 'vue-i18n';
+  const {t} = useI18n()
+
+  useHead({
+    title:  t('about.title', {name: t('name')}),
+    meta: [
+      { name: 'description', content: 'My amazing site.' }
+    ],
+  })
+  definePageMeta({
+    title: 'about.trans-title',
+    description: 'about.desc',
+  });
+</script>
 <template>
   <div class="w-full h-full flex items-center justify-center text-center">
     <div class="md:max-w-[70%]">
@@ -6,7 +21,7 @@
           <img src="/img/profil.jpg" />
         </div>
       </div>
-      <div class="divider mb-9"><span class="text-base text-primary capitalize">{{ $t('about.title') }}</span></div>
+      <div class="divider mb-9"><span class="text-base text-primary capitalize">{{ $t('about.title', {name: $t('me')}) }}</span></div>
       <div class="text-lg text-start grid xl:grid-cols-2 gap-9">
         <div class="">
           <h4 class="text-2xl text-primary mb-2">{{ $t('name') }}</h4>

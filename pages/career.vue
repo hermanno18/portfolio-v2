@@ -1,4 +1,19 @@
 <script setup>
+  import { useI18n } from 'vue-i18n';
+  const {t} = useI18n()
+
+  useHead({
+    title:  t('career.title', {name: t('name')}),
+    meta: [
+      { name: 'description', content: 'My amazing site.' }
+    ],
+  })
+  definePageMeta({
+    title: 'career.trans-title',
+    description: 'career.desc',
+  });
+
+
 import Career from '@/components/parts/Career.vue'
   const domains = [
     {

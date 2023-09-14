@@ -7,7 +7,12 @@ export default defineNuxtConfig({
     },
   ],
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
+    pageTransition: { name: 'page', mode: 'out-in' },
+    head: {
+      charset: 'utf-8',
+      title:'Hermann FOKOU',
+      viewport: 'width=device-width, initial-scale=1'
+    }
   },
 
   //modules
@@ -19,8 +24,8 @@ export default defineNuxtConfig({
     'nuxt-icon',
     // '@nuxtjs/i18n'
   ],
-  ssr: false,
-  //font famili
+  // ssr: false,
+    //font famili
   googleFonts: {
     families: {
       'Reem+Kufi': true

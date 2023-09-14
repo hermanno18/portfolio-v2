@@ -1,4 +1,19 @@
 <script setup>
+import { useI18n } from 'vue-i18n';
+
+const {t} = useI18n()
+
+useHead({
+  title:  t('contact.title', {name: t('name')}),
+  meta: [
+    { name: 'description', content: 'My amazing site.' }
+  ],
+})
+definePageMeta({
+  title: 'contact.trans-title',
+  description: 'contact.desc',
+});
+
 const contacts = ref([
   {
     title: "contact.phone",
@@ -53,7 +68,7 @@ const socials = ref([
           </div>
         </div>
       </div>
-      <div class="divider"><span class="text-base text-primary">{{ $t('contact.title') }} </span></div>
+      <div class="divider"><span class="text-base text-primary capitalize">{{ $t('contact.title', {name: t('me')}) }} </span></div>
       <div class="w-full flex flex-wrap gap-y-8 items-center justify-around mt-20 ">
         <a :href="contact.action()" target="_blank" v-for="contact in contacts" class="group border border-primry overflow-hidden flex gap-3 hover:gap-0 p-2 rounded-full items-center cursor-pointer transition-all duration-500 ease-in-out w-[250px] ">
           <div class="bg-white  group-hover:flex-1 transition-all duration-500 ease-in-out flex items-center justify-center p-2 rounded-full ">

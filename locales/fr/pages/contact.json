@@ -1,5 +1,7 @@
 {
-  "title":"Restons en contact",
+  "title":"Contactez {name}",
+  "trans-title": "Mes contacts.",
+  "desc": "Projets, sugestions, critique, je reste à votre écoute.",
   "follow-me":"Ou suivez-moi sur mes reseaux",
   "phone":"Appels"
 }

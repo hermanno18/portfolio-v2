@@ -1,4 +1,18 @@
 <script setup>
+import { useI18n } from 'vue-i18n';
+
+const {t} = useI18n()
+
+useHead({
+  meta: [
+    { name: 'description', content: 'My amazing site.' }
+  ],
+})
+definePageMeta({
+  title: 'name',
+  description: 'index.trans-desc',
+});
+
 const socials = ref([
 {
     title:'LinkedIn',
