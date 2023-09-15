@@ -22,8 +22,12 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     'nuxt-icon',
-    // '@nuxtjs/i18n'
+    '@nuxt/content'
   ],
+  // content: {
+  //   // https://content.nuxtjs.org/api/configuration
+  // },
+
   // ssr: false,
     //font famili
   googleFonts: {

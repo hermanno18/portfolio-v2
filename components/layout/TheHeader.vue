@@ -42,7 +42,7 @@
         <template v-for="(lang, i) in i18nCompLanguages">
           <button 
             class="px-4 flex flex-row items-center border border-gray-300 text-sm font-medium   focus:outline-none transition-all duration-300 ease-in-out"
-            :class="`${i===0 ? 'rounded-l-full' : ' rounded-r-full'} ${$i18n.locale === lang.i18nLang ? 'bg-primary text-white' : 'hover:bg-secondary hover:text-white'}`"
+            :class="`${i===0 ? 'rounded-l-full' : ' rounded-r-full'} ${($i18n.locale === lang.i18nLang) ? 'bg-primary text-white' : 'hover:bg-secondary hover:text-white'}`"
             @click="$i18n.locale=lang.i18nLang"
           >
             <span class="text-md capitalize">{{ lang.i18nLang }}</span>

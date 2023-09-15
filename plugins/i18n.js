@@ -5,12 +5,12 @@ import fr from '../locales/fr'
 
 export default defineNuxtPlugin(({ vueApp }) => {
 
-  const lang = process.client ? navigator.language.split("-")[0] : 'en'
+  const lang = process.client ? navigator.language.split("-")[0] : 'fr'
   const i18n = createI18n({
     legacy: false,
     globalInjection: true,
     locale: lang,
-    fallbackLocale: "en",
+    fallbackLocale: "fr",
     messages: {
       en, 
       fr, 
