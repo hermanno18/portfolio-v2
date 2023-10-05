@@ -148,12 +148,13 @@
   ]
 </script>
 <template>
-  <div class="h-full container mx-auto  px-5 lg:px-10 mt-6">
+  <div class="h-full w-full mx-auto container px-5 lg:px-10 mt-6">
     <div class="pt-16 md:pt-32 sticky top-0 bg-transparent backdrop-blur-sm pb-28">
-      <div class="w-full flex flex-col transition-all duration-500 gap-16 md:gap-32" >
+      <div class="flex flex-col gap-16 md:gap-32" >
         <div 
-          class="w-full flex flex-row bg-gray-900 relative p-3 bg-opacity-20 border border-white border-opacity-10 group" 
+          class=" flex flex-row bg-gray-900 relative p-3 bg-opacity-20 border border-white border-opacity-10 group" 
           v-for="project in projects"
+          data-aos="fade-up" data-aos-delay="300"
         >
           <div class="w-1/3 border-b-2 -left-3 -top-[1px] absolute"></div>
           <div class="w-1/3 border-b-2 -right-3 -bottom-[1px] absolute"></div>
@@ -164,8 +165,12 @@
               <div class="flex-1">
                 <h2 class="uppercase "><span class="text-primary">#</span> <span class="text-2xl">{{ $t(project.title) }}</span></h2>
               </div>
-              <div class="flex-wrap justify-center flex justify-end gap-3">
-                <div class="badge  badge-outline text-xs " v-for="tool in project.tools">{{ tool.title }}</div>
+              <div class="flex-wrap flex justify-end gap-3">
+                <div class="badge  badge-outline text-xs "
+                    data-aos="fade-left"
+                    :data-aos-delay="200* (project.tools.length - i + 1)"  
+                    data-aos-duration="900"
+                    v-for="(tool, i) in project.tools">{{ tool.title }}</div>
               </div>
             </div>
             <div class="h-0 overflow-hidden mt-4 group-hover:flex-1 transition-all duration-500">

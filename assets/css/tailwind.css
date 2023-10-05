@@ -13,6 +13,13 @@ html {
   font-optical-sizing: auto;
 }
 
+body {
+  @apply h-screen w-screen !overflow-x-hidden
+}
+body > div#__nuxt {
+  @apply h-full w-full
+}
+
 ::selection {
   @apply bg-white text-secondary
 }

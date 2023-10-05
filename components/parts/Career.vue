@@ -18,7 +18,7 @@
 </script>
 
 <template>
-    <div class="mt-14 md:mt-28">
+    <div class="mt-14 md:mt-28" :id="`career_${company.title}`">
       <div class="w-screen h-screen bg-gray-800 right-0 fixed top-0  -z-50 ease-in-out transition-all duration-500"
         :class="activeProject ? ' opacity-10 ' : 'opacity-0 '"
       >
@@ -49,7 +49,11 @@
           <h2 class="mb-2 uppercase font-semibold text-sm"><span class="text-secondary">W</span>orks</h2>
           <div class="grid sm:grid-cols-2 lg:grid-cols-1 2xl:grid-cols-2 gap-5">  
             <a 
-              href="" v-for="project in career.projects" 
+              href="" v-for="(project, i) in career.projects" 
+              data-aos="fade-left"
+              :data-aos-anchor="`#career_${company.title}`"
+              data-aos-duration="900"
+              :data-aos-delay="500*i"  
               :title="project.title"
               class="border rounded p-0 text-base overflow-hidden group shadow-lg" 
               @mouseover="projectHovered(project)" 

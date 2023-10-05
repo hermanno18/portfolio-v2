@@ -182,15 +182,15 @@ import { useI18n } from 'vue-i18n';
   ]
 
   onMounted(()=>{
-    gsap.from('.skill', {
-      duration:.4,
-      stagger:0.1,
-      y:-100,
-      scrollTrigger: {
-        trigger: ".skill",
-        start: 'top 80%', // Déclenche l'animation lorsque l'élément est à 80% de la vue
-      },
-    })
+    // gsap.from('.skill', {
+    //   duration:.4,
+    //   stagger:0.1,
+    //   y:-100,
+    //   scrollTrigger: {
+    //     trigger: ".skill",
+    //     start: 'top 80%', // Déclenche l'animation lorsque l'élément est à 80% de la vue
+    //   },
+    // })
   })
 
 </script>
@@ -198,20 +198,32 @@ import { useI18n } from 'vue-i18n';
   <div class="wh-full container mx-auto pb-20 px-5 lg:px-10">
     <div
       v-for="domain in domains"
-      class="mt-14 md:mt-20"
-      data-aos="fade-in"
+      :id="domain.title"
+      data-aos="fade"
+      data-aos-delay="200"  
+      class="mt-14 md:mt-20 !overflow-hidden"
     >
-      <h2 class=" uppercase text-lg"><span class="text-primary">#</span> {{ $t(domain.title) }}</h2>
+      <h2
+        class=" uppercase text-lg"
+        data-aos-delay="300"  
+        data-aos="fade-up"
+        :data-aos-anchor="`#${domain.title}`"
+      >
+        <span class="text-primary">#</span> {{ $t(domain.title) }}
+      </h2>
       <div class="divider my-4"></div>
       <div class="text-center flex gap-12 flex-wrap">
         <div 
-          v-for="skill in domain.skils"
+          data-aos="zoom-in-right"
+          :data-aos-delay="200* i "  
+          data-aos-duration="1200"
+          v-for="(skill, i) in domain.skils"
           class="cursor-pointer skill group "  
         >
           <div class="avatar block transition-all mx-auto">
-            <div class="overflow-hidden w-16 md:w-24 mask mask-squircle p-1  group-hover:mask-hexagon-2 group-hover:rotate-180  transition-all duration-500 ease-in-out" :style="`background-color: ${skill.color}`">
-              <div class="mask mask-squircle bg-white  bg-opacity-70 p-3  group-hover:p-4  group-hover:mask-hexagon-2 transition-all duration-500 ease-in-out ">
-                <img :src="skill.imgSRC" class=" group-hover:-rotate-180 transition-all duration-500 ease-in-out "/>
+            <div class="overflow-hidden w-16 md:w-24 mask mask-squircle p-1  group-hover:mask-hexagon-2 group-hover:rotate-180  transition-all duration-[900ms] ease-in-out" :style="`background-color: ${skill.color}`">
+              <div class="mask mask-squircle bg-white  bg-opacity-70 p-3  group-hover:p-4  group-hover:mask-hexagon-2 transition-all duration-[900ms] ease-in-out ">
+                <img :src="skill.imgSRC" class=" group-hover:-rotate-180 transition-all duration-[900ms] ease-in-out "/>
               </div>
             </div>
           </div>

@@ -24,6 +24,14 @@ export default defineNuxtConfig({
     'nuxt-icon',
     // '@nuxt/content'
   ],
+
+  plugins: [
+    {
+      src: '@/plugins/aos',
+      ssr: false,
+      mode: 'client',
+    },
+  ],
   // content: {
   //   // https://content.nuxtjs.org/api/configuration
   // },

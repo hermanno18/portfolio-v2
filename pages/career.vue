@@ -329,13 +329,14 @@ import Career from '@/components/parts/Career.vue'
   <div class="wh-full container mx-auto px-5 lg:px-10 ">
     <template
       v-for="(career, i) in careers"
-      class="pt-20"
+      class=""
     >
       <Career
-        class="mb-40" 
+        data-aos="fade-up" data-aos-delay="300"
         :career="career" 
         :company="findCompanyByID(career.company_id)"
       />
+      <div class="mb-40"></div>
     </template>
   </div>
 </template>
