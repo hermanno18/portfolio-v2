@@ -60,6 +60,17 @@
           </div> 
         </a>
       </div>
+      <div class="mt-20">
+        Mais ce n'est pas tout !
+      </div>
+    </div>
+  </div>
+  <div class="w-full">
+    <div>
+      passioné d'art (twins art)
+    </div>
+    <div>
+      Youtube
     </div>
   </div>
 </template>

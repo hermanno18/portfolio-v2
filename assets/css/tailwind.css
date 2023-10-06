@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  @apply h-screen w-screen !overflow-x-hidden
+  @apply h-screen w-full !overflow-x-hidden
 }
 body > div#__nuxt {
   @apply h-full w-full

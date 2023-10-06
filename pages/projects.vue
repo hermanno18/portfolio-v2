@@ -165,7 +165,7 @@
               <div class="flex-1">
                 <h2 class="uppercase "><span class="text-primary">#</span> <span class="text-2xl">{{ $t(project.title) }}</span></h2>
               </div>
-              <div class="flex-wrap flex justify-end gap-3">
+              <div class="flex-wrap flex justify-center md:justify-end gap-3">
                 <div class="badge  badge-outline text-xs "
                     data-aos="fade-left"
                     :data-aos-delay="200* (project.tools.length - i + 1)"  
