@@ -60,7 +60,7 @@
                   <span class="ml-3"><Icon name="material-symbols:arrow-forward" class="text-sm group-hover:rotate-[360deg] duration-300 text-primary group-hover:text-white  group-hover:bg-primary rounded-full" /></span>
                 </a>
                 <a href="" class=" group-hover:text-primary italic underline underline-offset-4 hover:underline-offset-2 transition-all duration-150 ">
-                  <span> {{ $t('about.desc-geek.link') }} </span>
+                  <span> {{ $t('about.desc-geek.link2') }} </span>
                   <span class="ml-3"><Icon name="material-symbols:arrow-forward" class="text-sm group-hover:rotate-[360deg] duration-300 text-primary group-hover:text-white  group-hover:bg-primary rounded-full" /></span>
                 </a>
               </p>
