@@ -22,7 +22,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     'nuxt-icon',
-    // '@nuxt/content'
+    // '@nuxt/content' // ca ne marche pas:  [worker init] Only URLs with a scheme in: file, data are supported by the default ESM loader. On Windows, absolute paths must be valid file:// URLs. Received protocol 'c:'
   ],
 
   plugins: [
