@@ -21,8 +21,13 @@ const socials = ref([
   },
   {
     title:'GitHub',
-    link:'https://github.com/hermanno18',
+    link:'https://www.github.com/hermanno18',
     icon: 'bi:github'
+  },
+  {
+    title:'Youtube',
+    link:'https://github.com/hermanno18',
+    icon: 'bi:youtube'
   },
   {
     title:'Figma',
@@ -37,7 +42,7 @@ const socials = ref([
 ])
 </script>
 <template>
-  <div  class=" fixed top-0 left-0 h-screen w-screen flex items-center justify-center text-center  overflow-hidden">
+  <div  class=" fixed top-0 left-0 h-screen w-screen flex items-center justify-center text-center  overflow-hidden ">
     <div class="absolute  md:left-10 bottom-16 ">
       <div class="text-center gap-4 flex md:flex-col items-center md:-translate-x-[40%]  ">
         <template
@@ -46,15 +51,15 @@ const socials = ref([
           <a :href="social.link" target="_blank" :title="social.title"  class="shadow group bg-white bg-opacity-80 p-3 aspect-square rounded-full flex items-center justify-center cursor-pointer hover:bg-opacity-100  transition-all duration-500 ease-in-out">
             <Icon :name="social.icon" class="text-xl group-hover:rotate-[360deg] group-hover:text-2xl text-gray-800 group-hover:text-primary transition-all duration-500 ease-in-out" />
           </a>
-          <div v-if="i<socials.length-1" class="bg-gray-500 opacity-20 h-5 w-2 rounded-full"></div>
+          <div v-if="i<socials.length-1" class="bg-primary opacity-50 h-5 w-2 rounded-full"></div>
         </template>
       </div>
     </div>
-    <div class="absolute w-2 h-2 rounded-full bg-gray-500 left-10 bottom-10 hidden md:block "></div>
+    <div class="absolute w-2 h-2 rounded-full bg-primary left-10 bottom-10 hidden md:block "></div>
     <div class="absolute gap-4 left-16 bottom-10 items-center translate-y-[40%] hidden md:flex">
       <!-- <div class="bg-gray-500 opacity-20 w-5 h-2 rounded-full"></div> -->
       <div class="text-sm">{{ $t('index.wondered') }} <span class="text-secondary">{{ $t('index.contact-me') }}</span> {{ $t('index.and-more') }}</div>
-      <div class="bg-gray-500 opacity-20 w-5 h-2 rounded-full"></div>
+      <div class="bg-primary opacity-50 w-5 h-2 rounded-full"></div>
     </div>
     <div class="absolute -z-[1]  ">
       <div class="spinner h-[300px] w-[300px]  md:h-[500px] md:w-[500px] rounded-full overflow-hidden">

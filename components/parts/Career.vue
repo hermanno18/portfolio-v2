@@ -52,18 +52,18 @@
               href="" v-for="(project, i) in career.projects" 
               data-aos="fade-left"
               :data-aos-anchor="`#career_${company.title}`"
-              data-aos-duration="900"
+              data-aos-duration="900"                                   
               :data-aos-delay="500*i"  
               :title="project.title"
               class="border rounded p-0 text-base overflow-hidden group shadow-lg" 
               @mouseover="projectHovered(project)" 
               @mouseout="activeProject = null"
             >
-              <div class="flex w-full overflow-hidden items-center gap-3">
+              <div class="flex w-full overflow-hidden items-center gap-3 line-clamp-1">
                 <div class="bg-white group-hover:flex-1 duration-300 transition-all p-1 text-center">
                   <Icon name="tabler:eye" class="text-xl group-hover:rotate-[360deg] duration-300 text-gray-800 group-hover:text-primary" />
                 </div> 
-                <div class="group-hover:opacity-0 group-hover:hidden delay-200 duration-300">{{ project.title }}</div> 
+                <div class="group-hover:opacity-0 group-hover:hidden delay-200 duration-300 line-clamp-1">{{ project.title }}</div> 
               </div> 
             </a>
           </div>

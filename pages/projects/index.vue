@@ -118,7 +118,7 @@
     },
     {
       title: "My Portfolio - Version 1",
-      description: "",
+      description: "pour exercer mes compétences, j'ai mis en commun les bases que j'avais ",
       tags: [
         "Personal",
         "Open Source",
@@ -174,15 +174,13 @@
               </div>
             </div>
             <div class="h-0 overflow-hidden mt-4 group-hover:flex-1 transition-all duration-500">
-              <p class="text-base">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, blanditiis veniam. Pariatur hic accusantium itaque, nisi quis voluptatum suscipit laudantium blanditiis totam nemo tempora, consequatur placeat, est labore eum debitis!
-              </p>
+              <p class="text-base">{{ project.description }}</p>
             </div>
             <div class="mt-4 text-xs flex flex-col md:flex-row items-center gap-4">
               <div class="flex-1">
                 <div class="w-48 opacity-0 group-hover:opacity-100">
-                  <a 
-                    href="/"
+                  <nuxt-link 
+                    :to="{name:'projects-title', params: {title: project.title} }"
                     title=" Voir les détails"
                     class="border block  rounded-full p-0 text-base overflow-hidden group shadow-lg " 
                   >
@@ -192,7 +190,7 @@
                       </div> 
                       <div class="group-hover:opacity-0 group-hover:hidden delay-200 duration-300"> Voir les détails </div> 
                     </div> 
-                  </a>
+                  </nuxt-link>
                 </div>
               </div>
               <div class="w-full hidden ">

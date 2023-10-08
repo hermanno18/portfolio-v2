@@ -15,62 +15,89 @@
   const cvLink = "https://docs.google.com/document/d/10DNm9bAm2deAKrlhitC5LIRuFO0tcqOlEGHiFPMNO5c/edit?usp=sharing"
 </script>
 <template>
-  <div class="w-full h-full flex items-center justify-center text-center">
-    <div class="md:max-w-[70%]">
-      <div class="avatar">
-        <div class="w-40 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-          <img src="/img/profil.jpg" />
+    <div class="w-full h-full flex items-center justify-center text-center px-3">
+      <div class="md:max-w-[70%]">
+        <div class="avatar">
+          <div class="w-40 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+            <img src="/img/profil.jpg" />
+          </div>
+        </div>
+        <div class="divider mb-9"><span class="text-base text-primary capitalize">{{ $t('about.title', {name: $t('me')}) }}</span></div>
+        <div class="text-lg text-start  bg-primary h-fit  p-2 grid xl:grid-cols-2 gap-5 xl:gap-0 relative">
+          <nuxt-link target="_blank" 
+            to="https://docs.google.com/document/d/10DNm9bAm2deAKrlhitC5LIRuFO0tcqOlEGHiFPMNO5c/edit?usp=sharing" 
+            class="absolute text-xs flex items-center justify-center align-middle text-center uppercase
+                  z-[500] bg-gray-800 border border-secondary !aspect-square w-20 rounded-full 
+                  right-3 top-3
+                  xl:left-[50%] xl:-translate-x-[50%] xl:top-[50%] xl:-translate-y-[50%] cursor-pointer 
+                  hover:bg-primary hover:border-gray-800 hover:rotate-[360deg] origin-center hover:text-gray-800 transition-all duration-300
+                "
+            >
+            <p>
+              <span>voir</span> <br>
+              mon CV
+            </p>
+          </nuxt-link>
+          <div class="left-side  group xl:self-end xl:h-full   bg-gray-800 border-primary border-2 shadow-sm -translate-x-6 xl:translate-y-6 hover:translate-x-0 hover:translate-y-0 transition-all duration-300 ease-in-out"> 
+            <div class="content">
+              <h4 class="text-2xl text-primary mb-2">{{ $t('name') }}</h4>  
+              <p> {{ $t('about.desc-pro.text') }} </p>
+              <p class="mt-5 text-sm ">
+                <nuxt-link :to="{name:'career'}" class=" group-hover:text-primary italic underline underline-offset-4 hover:underline-offset-2 transition-all duration-150 ">
+                  <span> {{ $t('about.desc-pro.link') }} </span>
+                  <span class="ml-3"><Icon name="material-symbols:arrow-forward" class="text-sm group-hover:rotate-[360deg] duration-300 text-primary group-hover:text-white  group-hover:bg-primary rounded-full" /></span>
+                </nuxt-link>
+              </p>
+            </div>
+          </div>
+          <div class="group right-side xl:text-end self-start xl:h-full flex justify-end  bg-gray-800 border-primary border-2 translate-x-6 xl:-translate-y-6 hover:translate-x-0 hover:translate-y-0 transition-all duration-300 ease-in-out">
+            <div class="content">
+              <h4 class="text-2xl text-primary mb-2">{{ $t('pseudo') }}</h4>
+              <p> {{ $t('about.desc-geek.text') }} </p>
+              <p class="mt-5 text-sm gap-2 flex flex-col">
+                <a href="" class=" group-hover:text-primary italic underline underline-offset-4 hover:underline-offset-2 transition-all duration-150 ">
+                  <span> {{ $t('about.desc-geek.link') }} </span>
+                  <span class="ml-3"><Icon name="material-symbols:arrow-forward" class="text-sm group-hover:rotate-[360deg] duration-300 text-primary group-hover:text-white  group-hover:bg-primary rounded-full" /></span>
+                </a>
+                <a href="" class=" group-hover:text-primary italic underline underline-offset-4 hover:underline-offset-2 transition-all duration-150 ">
+                  <span> {{ $t('about.desc-geek.link') }} </span>
+                  <span class="ml-3"><Icon name="material-symbols:arrow-forward" class="text-sm group-hover:rotate-[360deg] duration-300 text-primary group-hover:text-white  group-hover:bg-primary rounded-full" /></span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 flex justify-center gap-6" >
+          <Icon class="text-3xl -rotate-90" name="material-symbols:expand-circle-down-outline-rounded" />
+          <nuxt-link :to="{name:'contacts'}" class="uppercase  text-sm py-1 px-6 border border-primary w-fit rounded-full">contactez-moi</nuxt-link>
+          <Icon class="text-3xl rotate-90" name="material-symbols:expand-circle-down-outline-rounded" />
         </div>
       </div>
-      <div class="divider mb-9"><span class="text-base text-primary capitalize">{{ $t('about.title', {name: $t('me')}) }}</span></div>
-      <div class="text-lg text-start grid xl:grid-cols-2 gap-9">
-        <div class="">
-          <h4 class="text-2xl text-primary mb-2">{{ $t('name') }}</h4>
-          <p> {{ $t('about.desc-pro.text') }} </p>
-          <p class="mt-5 text-sm ">
-            <nuxt-link :to="{name:'career'}" class=" hover:text-primary italic underline underline-offset-4 hover:underline-offset-2 transition-all duration-150 group">
-              <span> {{ $t('about.desc-pro.link') }} </span>
-              <span class="ml-3"><Icon name="material-symbols:arrow-forward" class="text-sm group-hover:rotate-[360deg] duration-300 text-primary group-hover:text-white  group-hover:bg-primary rounded-full" /></span>
-            </nuxt-link>
-          </p>
-        </div>
-
-        <div class="">
-          <h4 class="text-2xl text-primary mb-2">{{ $t('pseudo') }}</h4>
-          <p> {{ $t('about.desc-geek.text') }} </p>
-          <p class="mt-5 text-sm ">
-            <a href="" class=" hover:text-primary italic underline underline-offset-4 hover:underline-offset-2 transition-all duration-150 group">
-              <span> {{ $t('about.desc-geek.link') }} </span>
-              <span class="ml-3"><Icon name="material-symbols:arrow-forward" class="text-sm group-hover:rotate-[360deg] duration-300 text-primary group-hover:text-white  group-hover:bg-primary rounded-full" /></span></a>
-          </p>
-        </div>
-      </div>
-      <div class=" md:w-1/3 mx-auto gap-5 mt-16">
-        <a 
-          :href="cvLink"
-          target="_blank" 
-          :title="$t('about.get-cv')"
-          class="border block rounded-full p-0 text-base overflow-hidden group shadow-lg " 
-        >
-          <div class="flex w-full overflow-hidden items-center gap-3">
-            <div class="bg-white group-hover:flex-1 duration-300 transition-all p-1 text-center">
-              <Icon name="tabler:eye" class="text-xl group-hover:rotate-[360deg] duration-300 text-gray-800 group-hover:text-primary" />
-            </div> 
-            <div class="group-hover:opacity-0 group-hover:hidden delay-200 duration-300">{{ $t('about.get-cv') }}</div> 
-          </div> 
-        </a>
-      </div>
-      <div class="mt-20">
-        Mais ce n'est pas tout !
-      </div>
     </div>
-  </div>
-  <div class="w-full">
-    <div>
-      passioné d'art (twins art)
-    </div>
-    <div>
-      Youtube
-    </div>
-  </div>
 </template>
+
+<style scoped>
+  .left-side {
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+    .content {
+      shape-outside: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+      max-width: 80%; /* Ajustez en fonction de votre mise en page */
+      padding: 20px; /* Ajustez selon vos préférences */
+    }
+  }
+
+  .right-side {
+    @media screen {
+      
+    }
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
+    .content {
+      shape-outside: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+      max-width: 80%; /* Ajustez en fonction de votre mise en page */
+      padding: 20px; /* Ajustez selon vos préférences */
+    }
+  }
+
+
+
+</style>

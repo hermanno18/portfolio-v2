@@ -8,6 +8,17 @@
   /* outline: 1px solid red; */
 }
 
+@font-face {
+  font-family: 'Ubuntu Mono';
+  src: url('~@/assets/fonts/UbuntuMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#terminal * {
+  font-family: 'Ubuntu Mono', monospace;
+}
+
 html {
   scroll-behavior: smooth;
   font-optical-sizing: auto;

@@ -195,7 +195,7 @@ import { useI18n } from 'vue-i18n';
 
 </script>
 <template>
-  <div class="wh-full container mx-auto pb-20 px-5 lg:px-10">
+  <div class=" container mx-auto pb-20 px-5 lg:px-10">
     <div
       v-for="domain in domains"
       :id="domain.title"

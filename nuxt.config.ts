@@ -40,7 +40,8 @@ export default defineNuxtConfig({
     //font famili
   googleFonts: {
     families: {
-      'Reem+Kufi': true
+      'Reem+Kufi': true,
+      'Ubuntu+Mono': true,
     }
   },
 
