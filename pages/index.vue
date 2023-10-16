@@ -1,4 +1,12 @@
 <script setup>
+
+import { readJsonFilesInDirectory } from '~/utils/reader';
+const directoryPath = '/';
+const jsonObjects = readJsonFilesInDirectory(directoryPath);
+
+console.log(jsonObjects);
+
+
 import { useI18n } from 'vue-i18n';
 
 const {t} = useI18n()

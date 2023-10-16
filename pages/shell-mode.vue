@@ -117,11 +117,24 @@
   const inputEvent = () => {
     prompInput.value= prompInput.value.toLowerCase()
   }
+
 </script>
 
 <template>
   
   <label id="terminal" for="input" class="p-4 h-screen w-screen  block">
+    
+<pre class="text-xs" >
+            _______    _______    _______    _______    _          _          _______         __     _____  
+|\     /|  (  ____ \  (  ____ )  (       )  (  ___  )  ( (    /|  ( (    /|  (  ___  )       /  \   / ___ \ 
+| )   ( |  | (    \/  | (    )|  | () () |  | (   ) |  |  \  ( |  |  \  ( |  | (   ) |       \/) ) ( (___) )
+| (___) |  | (__      | (____)|  | || || |  | (___) |  |   \ | |  |   \ | |  | |   | |         | |  \     / 
+|  ___  |  |  __)     |     __)  | |(_)| |  |  ___  |  | (\ \) |  | (\ \) |  | |   | |         | |  / ___ \ 
+| (   ) |  | (        | (\ (     | |   | |  | (   ) |  | | \   |  | | \   |  | |   | |         | | ( (   ) )
+| )   ( |  | (____/\  | ) \ \__  | )   ( |  | )   ( |  | )  \  |  | )  \  |  | (___) |       __) (_( (___) )
+|/     \|  (_______/  |/   \__/  |/     \|  |/     \|  |/    )_)  |/    )_)  (_______)       \____/ \_____/ 
+                                                                                                            
+</pre>
     <div ref="r" id="greetings" class="">
       <p>Hello i'm Hermann FOKOU ! Welcomme on the terminal's version of my portfolio ! Cool ! isn't it ??
       <br> Type <span class="font-semibold">'help'</span> to see available commands. </p>

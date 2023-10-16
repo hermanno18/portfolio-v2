@@ -180,6 +180,9 @@ import Career from '@/components/parts/Career.vue'
       ]
     }
   ]
+  const { data } = await useFetch('/api/companies')
+  console.log('les données', data.value)
+
   const careers = [
     {
       company_id: 0,
@@ -298,6 +301,7 @@ import Career from '@/components/parts/Career.vue'
       ],
     },
   ]
+
   careers.sort((a,b)=> b.start_date - a.start_date)
   const companies = [
     {

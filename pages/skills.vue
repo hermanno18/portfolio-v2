@@ -191,6 +191,12 @@ import { useI18n } from 'vue-i18n';
     //     start: 'top 80%', // Déclenche l'animation lorsque l'élément est à 80% de la vue
     //   },
     // })
+    const script = document.createElement('script');
+    script.src = 'https://widgets.fiverr.com/api/v1/seller/hermanno18?widget_id=86e21192-774b-4dfd-8459-d23d508b84a9';
+    script.setAttribute('data-config', '{"category_name":"\nProgramming \u0026 Tech\n\n"}');
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
   })
 
 </script>

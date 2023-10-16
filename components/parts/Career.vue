@@ -32,7 +32,7 @@
           </div>
         </h2>
       </div>
-      <div class="divider my-4"></div>
+      <div class="divider my-4 divider-primary "></div>
       <div class="flex flex-col lg:flex-row gap-7">
         <div class="w-full lg:w-8/12 flex flex-col justify-between gap-6">
           <div class="">
@@ -41,10 +41,10 @@
           </div>
           <div class="flex flex-wrap items-center gap-3 ">
             <h2 class=" uppercase font-semibold text-sm"><span class="text-secondary">T</span>ools :</h2>
-            <div class="badge  badge-outline text-xs "  v-for="tool in career.tools"> {{ tool.title }}</div>
+            <div class="badge badge-outline text-xs "  v-for="tool in career.tools"> {{ tool.title }}</div>
           </div>
         </div>
-        <div class="divider hidden lg:flex divider-horizontal"></div>
+        <div class="divider divider-red-500 hidden lg:flex divider-horizontal"></div>
         <div class="flex-1">
           <h2 class="mb-2 uppercase font-semibold text-sm"><span class="text-secondary">W</span>orks</h2>
           <div class="grid sm:grid-cols-2 lg:grid-cols-1 2xl:grid-cols-2 gap-5">  
@@ -55,15 +55,15 @@
               data-aos-duration="900"                                   
               :data-aos-delay="500*i"  
               :title="project.title"
-              class="border rounded p-0 text-base overflow-hidden group shadow-lg" 
+              class="border border-primary rounded p-0 text-base overflow-hidden group shadow-lg" 
               @mouseover="projectHovered(project)" 
               @mouseout="activeProject = null"
             >
               <div class="flex w-full overflow-hidden items-center gap-3 line-clamp-1">
-                <div class="bg-white group-hover:flex-1 duration-300 transition-all p-1 text-center">
-                  <Icon name="tabler:eye" class="text-xl group-hover:rotate-[360deg] duration-300 text-gray-800 group-hover:text-primary" />
+                <div class="bg-primary  group-hover:flex-1 duration-300 transition-all p-1 text-center hover:bg-white">
+                  <Icon name="tabler:eye" class="text-xl group-hover:rotate-[360deg] duration-300 text-white group-hover:text-primary" />
                 </div> 
-                <div class="group-hover:opacity-0 group-hover:hidden delay-200 duration-300 line-clamp-1">{{ project.title }}</div> 
+                <div class="group-hover:opacity-0 group-hover:hidden delay-200 duration-300 line-clamp-1 text-">{{ project.title }}</div> 
               </div> 
             </a>
           </div>

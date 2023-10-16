@@ -87,9 +87,6 @@
   }
 
   .right-side {
-    @media screen {
-      
-    }
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
     .content {
       shape-outside: polygon(0 0, 100% 0, 80% 100%, 0% 100%);

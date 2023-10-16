@@ -114,9 +114,9 @@ router.afterEach((to, from)=>{
         <button ref="mobileMenuOpener" @click="openMenu" class="fixed md:hidden left-[50%] -translate-x-[50%] h-16 focus:bg-red-500 aspect-square bg-gray-800 border shadow  shadow-white  mx-auto  mb-3 flex items-center justify-center rounded-full bottom-0 transition-all duration-500">
           <Icon name="material-symbols:menu-rounded" class="text-4xl text-center"  />
         </button>
-        <div @click="closeMenu" ref="mobileMenuOverlay" class="fixed bg-primary h-0 w-screen left-0 bottom-0 bg-opacity-30 transition-all duration-500 ">
+        <div @click="closeMenu" ref="mobileMenuOverlay" class="fixed bg-primary h-0 w-screen left-0 bottom-0 bg-opacity-30 transition-all duration-500 z-[5000]">
         </div>
-        <div ref="mobileMenuContainer" class=" fixed bg-opacity- left-[50%] -translate-x-[50%] text-base  text-center bg-gray-900  rounded-t-full -bottom-20 w-16 h-16 ease-linear  opacity-0 transition-all duration-500 ">
+        <div ref="mobileMenuContainer" class=" fixed bg-opacity- left-[50%] -translate-x-[50%] text-base  text-center bg-gray-900  rounded-t-full -bottom-20 w-16 h-16 ease-linear z-[5001]  opacity-0 transition-all duration-500 ">
           <nuxt-link @click="closeMenu" to="/" class="pt-4 w-fit mx-auto block hover:text-primary duration-150 delay-150 transition-all">
             <Icon name="material-symbols:other-houses-outline-rounded" class=" text-5xl text-center"  />
           </nuxt-link>

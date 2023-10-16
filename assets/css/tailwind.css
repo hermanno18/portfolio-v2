@@ -59,3 +59,7 @@ body > div#__nuxt {
 .h-input {
   @apply  bg-gray-800 border !border-opacity-10 rounded-full  outline-none px-4 py-1 text-base  
 }
+
+.divider {
+  @apply after:!bg-primary before:!bg-primary after:!bg-opacity-25 before:!bg-opacity-25
+}
