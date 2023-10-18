@@ -72,7 +72,7 @@ const socials = ref([
       <div class="w-full flex flex-wrap gap-y-8 items-center justify-around mt-20 ">
         <a :href="contact.action()" target="_blank" v-for="contact in contacts" class="group border border-primry overflow-hidden flex gap-3 hover:gap-0 p-2 rounded-full items-center cursor-pointer transition-all duration-500 ease-in-out w-[250px] ">
           <div class="bg-white  group-hover:flex-1 transition-all duration-500 ease-in-out flex items-center justify-center p-2 rounded-full ">
-            <Icon :name="contact.icon" class="text-2xl group-hover:rotate-[360deg] duration-300 text-gray-800 group-hover:text-primary" />
+            <Icon :name="contact.icon" class="text-2xl group-hover:rotate-[360deg] duration-300 text-base-100 group-hover:text-primary" />
           </div>
           <div class=" w-0 group-hover:opacity-0 transition-all duration-500 ease-in-out flex flex-col">
             <span class="text-lg ">{{ $t(contact.title) }}</span>
@@ -84,7 +84,7 @@ const socials = ref([
         <p class="text-base text-center ">{{ $t('contact.follow-me') }}</p>
         <div class="text-center mt-5 gap-4 flex justify-center flex-wrap items-center  ">
           <a :href="social.link" target="_blank" :title="social.title" v-for="social in socials" class="group bg-white bg-opacity-80 w-12 aspect-square rounded-full flex items-center justify-center cursor-pointer hover:bg-opacity-100  transition-all duration-500 ease-in-out">
-            <Icon :name="social.icon" class="text-2xl group-hover:rotate-[360deg] group-hover:text-3xl text-gray-800 group-hover:text-primary transition-all duration-500 ease-in-out" />
+            <Icon :name="social.icon" class="text-2xl group-hover:rotate-[360deg] group-hover:text-3xl text-base-100 group-hover:text-primary transition-all duration-500 ease-in-out" />
           </a>
         </div>
       </div>

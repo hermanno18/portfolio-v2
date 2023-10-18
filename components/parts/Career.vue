@@ -19,7 +19,7 @@
 
 <template>
     <div class="mt-14 md:mt-28" :id="`career_${company.title}`">
-      <div class="w-screen h-screen bg-gray-800 right-0 fixed top-0  -z-50 ease-in-out transition-all duration-500"
+      <div class="w-screen h-screen bg-base-100 right-0 fixed top-0  -z-50 ease-in-out transition-all duration-500"
         :class="activeProject ? ' opacity-10 ' : 'opacity-0 '"
       >
         <img v-if="activeProject" class="w-full h-full object-cover" :src="activeProject?.thumbnail">

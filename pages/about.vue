@@ -27,10 +27,10 @@
           <nuxt-link target="_blank" 
             to="https://docs.google.com/document/d/10DNm9bAm2deAKrlhitC5LIRuFO0tcqOlEGHiFPMNO5c/edit?usp=sharing" 
             class="absolute text-xs flex items-center justify-center align-middle text-center uppercase
-                  z-[500] bg-gray-800 border border-secondary !aspect-square w-20 rounded-full 
+                  z-[500] bg-base-100 border border-secondary !aspect-square w-20 rounded-full 
                   right-3 top-3
                   xl:left-[50%] xl:-translate-x-[50%] xl:top-[50%] xl:-translate-y-[50%] cursor-pointer 
-                  hover:bg-primary hover:border-gray-800 hover:rotate-[360deg] origin-center hover:text-gray-800 transition-all duration-300
+                  hover:bg-primary hover:border-base-100 hover:rotate-[360deg] origin-center hover:text-base-100 transition-all duration-300
                 "
             >
             <p>
@@ -38,7 +38,7 @@
               mon CV
             </p>
           </nuxt-link>
-          <div class="left-side  group xl:self-end xl:h-full   bg-gray-800 border-primary border-2 shadow-sm -translate-x-6 xl:translate-y-6 hover:translate-x-0 hover:translate-y-0 transition-all duration-300 ease-in-out"> 
+          <div class="left-side  group xl:self-end xl:h-full   bg-base-100 border-primary border-2 shadow-sm -translate-x-6 xl:translate-y-6 hover:translate-x-0 hover:translate-y-0 transition-all duration-300 ease-in-out"> 
             <div class="content">
               <h4 class="text-2xl text-primary mb-2">{{ $t('name') }}</h4>  
               <p> {{ $t('about.desc-pro.text') }} </p>
@@ -50,7 +50,7 @@
               </p>
             </div>
           </div>
-          <div class="group right-side xl:text-end self-start xl:h-full flex justify-end  bg-gray-800 border-primary border-2 translate-x-6 xl:-translate-y-6 hover:translate-x-0 hover:translate-y-0 transition-all duration-300 ease-in-out">
+          <div class="group right-side xl:text-end self-start xl:h-full flex justify-end  bg-base-100 border-primary border-2 translate-x-6 xl:-translate-y-6 hover:translate-x-0 hover:translate-y-0 transition-all duration-300 ease-in-out">
             <div class="content">
               <h4 class="text-2xl text-primary mb-2">{{ $t('pseudo') }}</h4>
               <p> {{ $t('about.desc-geek.text') }} </p>

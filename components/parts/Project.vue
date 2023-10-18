@@ -14,7 +14,7 @@
 
 <template>
   <div>
-    <div class="w-screen h-screen bg-gray-800 !right-0 !fixed !top-0  -z-50 ease-in-out transition-all duration-500"
+    <div class="w-screen h-screen bg-base-100 !right-0 !fixed !top-0  -z-50 ease-in-out transition-all duration-500"
       :class="activeProject ? ' opacity-10 ' : 'opacity-0 '"
     >
       <img v-if="activeProject" class="w-full h-full object-cover" :src="activeProject?.thumbnail">
@@ -22,7 +22,7 @@
     <nuxt-link 
       @mouseout="activeProject = null"
       @mouseover="projectHovered(project)" 
-      class=" flex flex-row bg-gray-900 relative p-3 bg-opacity-20 border border-primary border-opacity-20 group cursor-pointer" 
+      class=" flex flex-row bg-neutral relative p-3 bg-opacity-30 border border-primary border-opacity-20 group cursor-pointer" 
       :to="{name:'projects-title', params: {title: project.title} }"
     >
       <div class="w-1/3 border-b-2 -left-3 -top-[1px] absolute border-primary"></div>
@@ -55,7 +55,7 @@
               >
                 <div class="flex w-full overflow-hidden items-center gap-3">
                   <div class="bg-white group-hover:flex-1 duration-300 transition-all p-1 text-center">
-                    <Icon name="tabler:eye" class="text-xl group-hover:rotate-[360deg] duration-300 text-gray-800 group-hover:text-primary" />
+                    <Icon name="tabler:eye" class="text-xl group-hover:rotate-[360deg] duration-300 text-base-100 group-hover:text-primary" />
                   </div> 
                   <div class="group-hover:opacity-0 group-hover:hidden delay-200 duration-300"> Voir les détails </div> 
                 </div> 

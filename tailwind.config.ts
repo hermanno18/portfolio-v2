@@ -4,7 +4,8 @@ export default <Partial<Config>>{
   theme: {
     extend: {
       colors: {
-        primary: '#FF2B51' 
+        primary: '#FF2B51',
+        secondary: "#00e1ff",
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -26,10 +27,9 @@ export default <Partial<Config>>{
   daisyui: {
     themes: [
       {
-        mytheme: {
+        myDark: {
           "primary": "#FF2B51",
           "secondary": "#00e1ff",
-          "default" : "#1f2937",
           "accent": "#1FB2A5",
           "neutral": "#191D24",
           "base-100": "#2A303C",
@@ -37,9 +37,21 @@ export default <Partial<Config>>{
           "success": "#36D399",
           "warning": "#FBBD23",
           "error": "#F87272",
-        },
+        }
       },
-      // "winter"
+      {
+        winter : {
+          "primary": "#FF2B51",
+          "secondary": "#00e1ff",
+          "accent": "#1FB2A5",
+          "neutral": "#BFD7EA",
+          "base-100": "#D6EAF8",
+          "info": "#3ABFF8",
+          "success": "#36D399",
+          "warning": "#FBBD23",
+          "error": "#F87272",
+        }
+      },
     ],
   },
   plugins: [require('daisyui')],

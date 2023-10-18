@@ -1,7 +1,13 @@
 <script setup>
 
+onMounted(()=>{
+  window.addEventListener('storage', (event) => {
+    isLight.value = isWhiteTheme()
+  }, false)
+})
+
 import { readJsonFilesInDirectory } from '~/utils/reader';
-const directoryPath = '/';
+const directoryPath = './data/db/companies';
 const jsonObjects = readJsonFilesInDirectory(directoryPath);
 
 console.log(jsonObjects);
@@ -48,6 +54,10 @@ const socials = ref([
     icon: 'bx:bxl-telegram'
   },
 ])
+
+const isLight = ref(isWhiteTheme())
+
+
 </script>
 <template>
   <div  class=" fixed top-0 left-0 h-screen w-screen flex items-center justify-center text-center  overflow-hidden ">
@@ -57,7 +67,7 @@ const socials = ref([
           v-for="(social, i) in socials"
         >
           <a :href="social.link" target="_blank" :title="social.title"  class="shadow group bg-white bg-opacity-80 p-3 aspect-square rounded-full flex items-center justify-center cursor-pointer hover:bg-opacity-100  transition-all duration-500 ease-in-out">
-            <Icon :name="social.icon" class="text-xl group-hover:rotate-[360deg] group-hover:text-2xl text-gray-800 group-hover:text-primary transition-all duration-500 ease-in-out" />
+            <Icon :name="social.icon" class="text-xl group-hover:rotate-[360deg] group-hover:text-2xl text-base-100 group-hover:text-primary transition-all duration-500 ease-in-out" />
           </a>
           <div v-if="i<socials.length-1" class="bg-primary opacity-50 h-5 w-2 rounded-full"></div>
         </template>
@@ -65,15 +75,14 @@ const socials = ref([
     </div>
     <div class="absolute w-2 h-2 rounded-full bg-primary left-10 bottom-10 hidden md:block "></div>
     <div class="absolute gap-4 left-16 bottom-10 items-center translate-y-[40%] hidden md:flex">
-      <!-- <div class="bg-gray-500 opacity-20 w-5 h-2 rounded-full"></div> -->
       <div class="text-sm">{{ $t('index.wondered') }} <span class="text-secondary">{{ $t('index.contact-me') }}</span> {{ $t('index.and-more') }}</div>
       <div class="bg-primary opacity-50 w-5 h-2 rounded-full"></div>
     </div>
     <div class="absolute -z-[1]  ">
       <div class="spinner h-[300px] w-[300px]  md:h-[500px] md:w-[500px] rounded-full overflow-hidden">
-        <div class=" bg-gray-800  h-[300px] w-[300px]  md:h-[500px] md:w-[500px] rounded-full relative overflow-hidden">
+        <div class=" bg-base-100  h-[300px] w-[300px]  md:h-[500px] md:w-[500px] rounded-full relative overflow-hidden">
           <img src="/img/video-bg-1.png" alt="" class="absolute  h-full w-ful opacity-50">
-          <div class="absolute h-full w-full  rounded-full" style=" background: rgba(31, 41, 55, 1.0); background: radial-gradient(at center, rgba(31, 41, 55, 1.0) 30%, rgba(31, 41, 55, 0.7), rgba(31, 41, 55, 1.0), rgba(255, 255, 255, 0.0));"></div>
+          <div v-if="!isLight" class="absolute h-full w-full  rounded-full" style=" background: rgba(31, 41, 55, 1.0); background: radial-gradient(at center, rgba(31, 41, 55, 1.0) 30%, rgba(31, 41, 55, 0.7), rgba(31, 41, 55, 1.0), rgba(255, 255, 255, 0.0));"></div>
         </div>
       </div>
     </div>
@@ -81,7 +90,7 @@ const socials = ref([
       <div class="max-w-[450px] maxh-[480px] ">
         <div class="mb-5">
           <p class="mb-5">
-            {{ $t('index.hello') }}  🙃
+            {{ $t('index.hello') }}  🙃 
           </p>
           <p>{{ $t('index.im') }} <span class="text-info">Hermann FOKOU</span>,</p>
           <p class=" mt-3 text-xl sm:text-lg">{{ $t('index.desc') }} <br class=sm:hidden> {{ $t('index.desc2') }}</p>
@@ -89,7 +98,9 @@ const socials = ref([
           <p></p>
         </div>
         <div class="relative flex justify-center pt-4">
-          <div class="scroll-down bottom-0 mt-5"></div>
+          <nuxt-link :to="{name:'about'}" class="scroll-down bottom-0 mt-5 text-3xl">
+            <Icon name="bi:linkedin"/>
+          </nuxt-link>
         </div>
       </div>
     </div>
@@ -135,15 +146,7 @@ const socials = ref([
 .scroll-down {
   position: absolute;
   z-index: 100;
-  width: 30px;
-  height: 30px;
-  border-bottom: 4px solid #fff;
-  border-right: 4px solid #fff;
-  border-radius: 5px;
-  z-index: 9;
-  -webkit-transform:  rotate(45deg);
-  -moz-transform:  rotate(45deg);
-  transform:  rotate(45deg);
+
   -webkit-animation: fade_move_down 4s ease-in-out infinite;
   -moz-animation:    fade_move_down 4s ease-in-out infinite;
   animation:         fade_move_down 4s ease-in-out infinite;
@@ -152,18 +155,18 @@ const socials = ref([
 
 /*animated scroll arrow animation*/
 @-webkit-keyframes fade_move_down {
-  0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  0%   { -webkit-transform:translate(0,-10px); opacity: 0;  }
   50%  { opacity: 1;  }
-  100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  100% { -webkit-transform:translate(0,10px); opacity: 0; }
 }
 @-moz-keyframes fade_move_down {
-  0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  0%   { -moz-transform:translate(0,-10px); opacity: 0;  }
   50%  { opacity: 1;  }
-  100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  100% { -moz-transform:translate(0,10px); opacity: 0; }
 }
 @keyframes fade_move_down {
-  0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  0%   { transform:translate(0,-10px); opacity: 0;  }
   50%  { opacity: 1;  }
-  100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  100% { transform:translate(0,10px); opacity: 0; }
 }
 </style>

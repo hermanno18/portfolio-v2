@@ -42,7 +42,7 @@ body > div#__nuxt {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  @apply bg-gray-800
+  @apply bg-base-100
 }
 
 /* Handle */
@@ -57,7 +57,7 @@ body > div#__nuxt {
 }
 
 .h-input {
-  @apply  bg-gray-800 border !border-opacity-10 rounded-full  outline-none px-4 py-1 text-base  
+  @apply  bg-base-100 border !border-opacity-10 rounded-full  outline-none px-4 py-1 text-base  
 }
 
 .divider {
