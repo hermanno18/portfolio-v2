@@ -63,6 +63,9 @@ export default defineNuxtConfig({
     enabled: true
   },
   
+  runtimeConfig: {
+    apiBaseUrl: ""
+  },
 
   nitro: {
     storage: {

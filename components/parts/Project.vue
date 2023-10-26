@@ -17,13 +17,13 @@
     <div class="w-screen h-screen bg-base-100 !right-0 !fixed !top-0  -z-50 ease-in-out transition-all duration-500"
       :class="activeProject ? ' opacity-10 ' : 'opacity-0 '"
     >
-      <img v-if="activeProject" class="w-full h-full object-cover" :src="activeProject?.thumbnail">
+      <img v-if="activeProject" class="w-full h-full object-cover" :src="activeProject?.featured_image">
     </div>
     <nuxt-link 
       @mouseout="activeProject = null"
       @mouseover="projectHovered(project)" 
       class=" flex flex-row bg-neutral relative p-3 bg-opacity-30 border border-primary border-opacity-20 group cursor-pointer" 
-      :to="{name:'projects-title', params: {title: project.title} }"
+      :to="{name:'projects-slug', params: {slug: project.slug} }"
     >
       <div class="w-1/3 border-b-2 -left-3 -top-[1px] absolute border-primary"></div>
       <div class="w-1/3 border-b-2 -right-3 -bottom-[1px] absolute border-primary"></div>
@@ -43,13 +43,13 @@
           </div>
         </div>
         <div class="h-0 overflow-hidden mt-4 group-hover:flex-1 transition-all duration-500">
-          <p class="text-base">{{ project.description }}</p>
+          <p class="text-base leading-8 line-clamp-3 md:w-1/2" v-html="project.content"></p>
         </div>
         <div class="mt-4 text-xs flex flex-col md:flex-row items-center gap-4">
           <div class="flex-1">
             <div class="w-48 opacity-0 group-hover:opacity-100">
               <nuxt-link 
-                :to="{name:'projects-title', params: {title: project.title} }"
+                :to="{name:'projects-slug', params: {slug: project.slug} }"
                 title=" Voir les détails"
                 class="border block  rounded-full p-0 text-base overflow-hidden group shadow-lg " 
               >
@@ -68,7 +68,7 @@
           <div class="flex justify-center flex-wrap gap-2">
             <span class="" v-for="tag in project.tags">
               <span class="text-primary">#</span>
-              <span>{{ tag }}</span>
+              <span class="capitalize">{{ tag }}</span>
             </span>
           </div>
         </div>
