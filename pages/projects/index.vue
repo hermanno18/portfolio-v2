@@ -23,17 +23,22 @@
   const projects = data.value
 </script>
 <template>
-<div class="wh-full container mx-auto px-5 lg:px-10 mt-36">
-    <template
-      v-for="(project, i) in projects"
-      class=""
-    >
-      <Project
-        data-aos="fade-up" data-aos-delay="300"
-        :project="project" 
-      />
-      <div class="mb-40"></div>
+  <div class="wh-full container mx-auto px-5 lg:px-10 mt-36">
+    <template v-if="!error" >
+      <template
+        v-for="(project, i) in projects"
+        class=""
+      >
+        <Project
+          data-aos="fade-up" data-aos-delay="300"
+          :project="project" 
+        />
+        <div class="mb-40"></div>
+      </template>
     </template>
+    <div v-else>
+      <GenericError />
+    </div>
   </div>
 </template>
 <style>

@@ -6,13 +6,6 @@ onMounted(()=>{
   }, false)
 })
 
-import { readJsonFilesInDirectory } from '~/utils/reader';
-const directoryPath = './data/db/companies';
-const jsonObjects = readJsonFilesInDirectory(directoryPath);
-
-console.log(jsonObjects);
-
-
 import { useI18n } from 'vue-i18n';
 
 const {t} = useI18n()
@@ -27,36 +20,16 @@ definePageMeta({
   description: 'index.trans-desc',
 });
 
-const socials = ref([
-{
-    title:'LinkedIn',
-    link:'https://www.linkedin.com/in/hermann-fokou',
-    icon: 'bi:linkedin'
-  },
-  {
-    title:'GitHub',
-    link:'https://www.github.com/hermanno18',
-    icon: 'bi:github'
-  },
-  {
-    title:'Youtube',
-    link:'https://github.com/hermanno18',
-    icon: 'bi:youtube'
-  },
-  {
-    title:'Figma',
-    link:'https://www.figma.com/@hermannfokou',
-    icon: 'fa6-brands:figma'
-  },
-  {
-    title:'Telegram',
-    link:'https://t.me/hermanno18',
-    icon: 'bx:bxl-telegram'
-  },
-])
+
 
 const isLight = ref(isWhiteTheme())
 
+const { data, pending, error, refresh } = await useAsyncData(
+  'contacts-list',
+  () => $fetch(`/api/contacts/`)
+)
+
+const socials = data.value?.filter(e=>isContactSocial(e)).reverse() || []
 
 </script>
 <template>
@@ -75,7 +48,7 @@ const isLight = ref(isWhiteTheme())
     </div>
     <div class="absolute w-2 h-2 rounded-full bg-primary left-10 bottom-10 hidden md:block "></div>
     <div class="absolute gap-4 left-16 bottom-10 items-center translate-y-[40%] hidden md:flex">
-      <div class="text-sm">{{ $t('index.wondered') }} <span class="text-secondary">{{ $t('index.contact-me') }}</span> {{ $t('index.and-more') }}</div>
+      <div class="text-sm">{{ $t('index.wondered') }} <nuxt-link :to="{name: 'contacts'}" class="text-secondary">{{ $t('index.contact-me') }}</nuxt-link> {{ $t('index.and-more') }}</div>
       <div class="bg-primary opacity-50 w-5 h-2 rounded-full"></div>
     </div>
     <div class="absolute -z-[1]  ">

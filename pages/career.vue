@@ -23,7 +23,7 @@
   )
 
   const careers = data.value
-  careers.sort((a,b)=> b.start_date - a.start_date)
+  if(careers) careers.sort((a,b)=> b.start_date - a.start_date)
 
 </script>
 <template>
@@ -43,8 +43,8 @@
         Aucune entrée pour l'instant
       </div>
     </template>
-    <div v-else class="mt-12">
-      Nous avons rencontré un PB (on affiche le composant des PB et le boutotn pour recharger)
+    <div v-else class="mt-24 ">
+     <GenericError></GenericError>
     </div>
   </div>
 </template>

@@ -36,7 +36,9 @@ const regrouperParAttribut = (tableau) => {
     return Object.values(groupes);
 }
 
-const  domains = regrouperParAttribut(data.value)
+let  domains = []
+if(data.value) domains = regrouperParAttribut(data.value)
+
 
   onMounted(()=>{
     // gsap.from('.skill', {
@@ -61,6 +63,7 @@ const  domains = regrouperParAttribut(data.value)
 
   <div class=" container mx-auto pb-20 px-5 lg:px-10">
     <div
+      v-if="!error"
       v-for="domain in domains.reverse()"
       :id="domain.title"
       data-aos="fade"
@@ -94,6 +97,9 @@ const  domains = regrouperParAttribut(data.value)
           <span class="capitalize text-sm">{{ skill.title }}</span>
         </div>
       </div>
+    </div>
+    <div v-else class="mt-24">
+      <GenericError />
     </div>
   </div> 
 </template>

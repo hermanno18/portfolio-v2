@@ -14,53 +14,18 @@ definePageMeta({
   description: 'contact.desc',
 });
 
-const contacts = ref([
-  {
-    title: "contact.phone",
-    icon: "material-symbols:phone-in-talk",
-    action: ()=> 'tel:+237699167012',
-    value: "699167012",
-  },
-  {
-    title: "whatsapp",
-    action: ()=> 'https://wa.me/237699167012',
-    icon: "ri:whatsapp-fill",
-    value: "699167012"
-  },
-  {
-    title: "Email",
-    action: ()=> 'mailto:hermann18pavel@gmailcom',
-    icon: "bi:envelope-at-fill",
-    value: "hermann18pavel@gmail.com"
-  },
-])
-const socials = ref([
-{
-    title:'LinkedIn',
-    link:'https://www.linkedin.com/in/hermann-fokou',
-    icon: 'bi:linkedin'
-  },
-  {
-    title:'GitHub',
-    link:'https://github.com/hermanno18',
-    icon: 'bi:github'
-  },
-  {
-    title:'Figma',
-    link:'https://www.figma.com/@hermannfokou',
-    icon: 'fa6-brands:figma'
-  },
-  {
-    title:'Telegram',
-    link:'https://t.me/hermanno18',
-    icon: 'bx:bxl-telegram'
-  },
-])
+const { data, pending, error, refresh } = await useAsyncData(
+  'contacts-list',
+  () => $fetch(`/api/contacts/`)
+)
+
+const contacts = data.value?.filter(e=>!isContactSocial(e)) || []
+const socials = data.value?.filter(e=>isContactSocial(e)) || []
 </script>
 
 <template>
   <div class="w-full h-full py-10 flex items-center justify-center">
-    <div class="w-[70%]">
+    <div v-if="!error" class="w-[70%]">
       <div class="items-center flex justify-center">
         <div class="avatar m-auto">
           <div class="w-40 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
@@ -70,7 +35,7 @@ const socials = ref([
       </div>
       <div class="divider"><span class="text-base text-primary capitalize">{{ $t('contact.title', {name: t('me')}) }} </span></div>
       <div class="w-full flex flex-wrap gap-y-8 items-center justify-around mt-20 ">
-        <a :href="contact.action()" target="_blank" v-for="contact in contacts" class="group border border-primry overflow-hidden flex gap-3 hover:gap-0 p-2 rounded-full items-center cursor-pointer transition-all duration-500 ease-in-out w-[250px] ">
+        <a :href="contact.href" target="_blank" v-for="contact in contacts" class="group border border-primry overflow-hidden flex gap-3 hover:gap-0 p-2 rounded-full items-center cursor-pointer transition-all duration-500 ease-in-out w-[250px] ">
           <div class="bg-white  group-hover:flex-1 transition-all duration-500 ease-in-out flex items-center justify-center p-2 rounded-full ">
             <Icon :name="contact.icon" class="text-2xl group-hover:rotate-[360deg] duration-300 text-base-100 group-hover:text-primary" />
           </div>
@@ -88,6 +53,9 @@ const socials = ref([
           </a>
         </div>
       </div>
+    </div>
+    <div v-else>
+      <GenericError></GenericError>
     </div>
   </div>
 </template>

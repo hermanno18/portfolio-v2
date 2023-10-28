@@ -21,8 +21,8 @@ const project = data
 
 <template>
 
-  <div class="h-full w-full mx-auto pt-9 md:p-9 lg:px-10 mt-9 ">
-    <!-- The button to open modal -->
+  <div v-if="!error" class="h-full w-full mx-auto pt-9 md:p-9 lg:px-10 mt-9 ">
+    <!-- The nuxt-link to open modal -->
 
 <!-- Put this part before </body> tag -->
 <input type="checkbox" id="my_modal_7" class="modal-toggle" />
@@ -93,6 +93,22 @@ const project = data
         </div>
       </div>  
     </div>
+  </div>
+  <div class="mt-24" v-else>
+    <GenericError>
+      <div>
+        <p class="text-base">
+          I Got some difficulties to display this projet. Sad :(
+          <br> It was a pretty good one !
+          <div class="mt-6">
+            Try this alternatives actions
+          </div>
+        </p>
+
+        <br>
+        <nuxt-link :to="{name:'projects'}" class="uppercase text-sm py-1 px-6 border border-primary w-fit rounded-full">Go to Projets page</nuxt-link>
+      </div>
+    </GenericError>
   </div>
 </template>
 

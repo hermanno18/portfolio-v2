@@ -35,9 +35,9 @@ import {menuItems} from '~/components/layout/static/menuItems';
 </script>
 
 <template>
-    <button ref="mobileMenuOpener" @click="openMenu" class="fixed md:hidden left-[50%] -translate-x-[50%] h-16 focus:bg-red-500 aspect-square bg-base-100 border shadow  shadow-white  mx-auto  mb-3 flex items-center justify-center rounded-full bottom-0 transition-all duration-500">
+    <nuxt-link ref="mobileMenuOpener" @click="openMenu" class="fixed md:hidden left-[50%] -translate-x-[50%] h-16 focus:bg-red-500 aspect-square bg-base-100 border shadow  shadow-white  mx-auto  mb-3 flex items-center justify-center rounded-full bottom-0 transition-all duration-500">
       <Icon name="material-symbols:menu-rounded" class="text-4xl text-center"  />
-    </button>
+    </nuxt-link>
     <div @click="closeMenu" ref="mobileMenuOverlay" class="fixed bg-primary h-0 w-screen left-0 bottom-0 bg-opacity-30 transition-all duration-500 z-[5000]">
     </div>
     <div ref="mobileMenuContainer" class=" fixed bg-opacity- left-[50%] -translate-x-[50%] text-base  text-center bg-neutral  rounded-t-full -bottom-20 w-16 h-16 ease-linear z-[5001]  opacity-0 transition-all duration-500 ">
@@ -66,9 +66,9 @@ import {menuItems} from '~/components/layout/static/menuItems';
           >{{ $t(item.title) }}</nuxt-link>
         </div>
         <div class="flex justify-center items-end ">
-          <button @click="closeMenu" class="h-16 focus:bg-red-500 aspect-square bg-primary bg-opacity-20 border shadow  shadow-white  mx-auto flex items-center justify-center rounded-full ">
+          <nuxt-link @click="closeMenu" class="h-16 focus:bg-red-500 aspect-square bg-primary bg-opacity-20 border shadow  shadow-white  mx-auto flex items-center justify-center rounded-full ">
             <Icon name="uil:times" class="text-4xl text-center "  />
-          </button>
+          </nuxt-link>
         </div>
         <div class="flex relative items-center justify-start" v-for="item in menuItems.slice(4,5)">
           <nuxt-link 

@@ -24,6 +24,9 @@ router.afterEach((to, from)=>{
   </div>
   <div id="appContainer" class="h-full p-3 md:p-6 !pt-0 text-2xl flex flex-col">
     <div class="fixed top-0 left-0 -z-[500] h-full w-full bg-base-100 ">
+      <div id="stars" class="self-start z-30"></div>
+      <div id="stars2" class="self-start z-40"></div>
+      <div id="stars3" class="self-start z-20"></div>
       <AnimatedBG />
     </div>
     <div class=" flex-1 w-full h-full flex flex-col relative ">

@@ -14,7 +14,7 @@
       <Icon name="material-symbols:other-houses-outline-rounded" class="text-2xl text-end"  />
     </nuxt-link>
     <nuxt-link 
-      class="group overflow-hidden h-fit flex justify-end cursor-pointer" 
+      class="group overflow-hidden h-fit flex justify-end cursor-pointer uppercase" 
       v-for="item in menuItems"
       :to="{name: item.route}"
     >
