@@ -35,15 +35,15 @@ import {menuItems} from '~/components/layout/static/menuItems';
 </script>
 
 <template>
-    <nuxt-link ref="mobileMenuOpener" @click="openMenu" class="fixed md:hidden left-[50%] -translate-x-[50%] h-16 focus:bg-red-500 aspect-square bg-base-100 border shadow  shadow-white  mx-auto  mb-3 flex items-center justify-center rounded-full bottom-0 transition-all duration-500">
+    <a ref="mobileMenuOpener" @click="openMenu" class="fixed md:hidden left-[50%] -translate-x-[50%] h-16 focus:bg-red-500 aspect-square bg-base-100 border shadow  shadow-white  mx-auto  mb-3 flex items-center justify-center rounded-full bottom-0 transition-all duration-500">
       <Icon name="material-symbols:menu-rounded" class="text-4xl text-center"  />
-    </nuxt-link>
+    </a>
     <div @click="closeMenu" ref="mobileMenuOverlay" class="fixed bg-primary h-0 w-screen left-0 bottom-0 bg-opacity-30 transition-all duration-500 z-[5000]">
     </div>
     <div ref="mobileMenuContainer" class=" fixed bg-opacity- left-[50%] -translate-x-[50%] text-base  text-center bg-neutral  rounded-t-full -bottom-20 w-16 h-16 ease-linear z-[5001]  opacity-0 transition-all duration-500 ">
-      <nuxt-link @click="closeMenu" to="/" class="pt-4 w-fit mx-auto block hover:text-primary duration-150 delay-150 transition-all">
+      <a @click="closeMenu" to="/" class="pt-4 w-fit mx-auto block hover:text-primary duration-150 delay-150 transition-all">
         <Icon name="material-symbols:other-houses-outline-rounded" class=" text-5xl text-center"  />
-      </nuxt-link>
+      </a>
       <div class="grid grid-cols-3 grid-rows-2 py-2 px-3 gap-2 aspect-[2/1] ">
         <div
           v-for="(item, i) in menuItems.slice(0,4)"
@@ -55,7 +55,7 @@ import {menuItems} from '~/components/layout/static/menuItems';
             ${i==3? ' justify-end items-center': ''}
           `" 
         >
-          <nuxt-link 
+          <a 
             :to="item.route"
             @click="closeMenu"
             class="w-full h-fit text-center absolute border shadow shadow-white rounded-full px-1 transition-all duration-300 hover:text-primary hover:border-primary hover:shadow-primary focus:text-primary focus:border-primary focus:shadow-primary"
@@ -63,21 +63,21 @@ import {menuItems} from '~/components/layout/static/menuItems';
               ${i==0? ' translate-x-[20%] translate-y-[50%]' : 'items-end'}
               ${i==2? ' -translate-x-[20%] translate-y-[50%]' : 'items-end'}
             `"
-          >{{ $t(item.title) }}</nuxt-link>
+          >{{ $t(item.title) }}</a>
         </div>
         <div class="flex justify-center items-end ">
-          <nuxt-link @click="closeMenu" class="h-16 focus:bg-red-500 aspect-square bg-primary bg-opacity-20 border shadow  shadow-white  mx-auto flex items-center justify-center rounded-full ">
+          <a @click="closeMenu" class="h-16 focus:bg-red-500 aspect-square bg-primary bg-opacity-20 border shadow  shadow-white  mx-auto flex items-center justify-center rounded-full ">
             <Icon name="uil:times" class="text-4xl text-center "  />
-          </nuxt-link>
+          </a>
         </div>
         <div class="flex relative items-center justify-start" v-for="item in menuItems.slice(4,5)">
-          <nuxt-link 
+          <a 
             @click="closeMenu"
             :to="item.route"
             class="w-full h-fit text-center absolute border shadow shadow-white rounded-full px-1 transition-all duration-300 hover:text-primary hover:border-primary hover:shadow-primary focus:text-primary focus:border-primary focus:shadow-primary"
           >
             {{ $t(item.title) }}
-          </nuxt-link>
+          </a>
         </div>
 
       </div>

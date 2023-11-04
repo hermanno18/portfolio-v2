@@ -169,7 +169,7 @@
           </span>
         </span>
         <input v-model="prompInput" type="text" name="input" id="input" autofocus autocomplete="off" class="border-none outline-none bg-transparent flex-1" @input="inputEvent">
-        <nuxt-link id='nuxt-link'></nuxt-link>
+        <a id='nuxt-link'></a>
       </form>
     </div>
   </label>

@@ -106,7 +106,7 @@ const project = data
         </p>
 
         <br>
-        <nuxt-link :to="{name:'projects'}" class="uppercase text-sm py-1 px-6 border border-primary w-fit rounded-full">Go to Projets page</nuxt-link>
+        <a :to="{name:'projects'}" class="uppercase text-sm py-1 px-6 border border-primary w-fit rounded-full">Go to Projets page</a>
       </div>
     </GenericError>
   </div>

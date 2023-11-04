@@ -1,0 +1,13 @@
+{
+  "title": "Career of {name}.",
+  "desc": "Balanced between profession and passion.",
+  "trans-title": "My Career.",
+  "desc-pro": {
+    "text":"Passionate about computer science, the Software Engineering graduate that I am is dedicated to learning and sharing what he learns. Especially in web development, technology, but also in general sciences.",
+    "link":"Discover my professional journey"
+  },
+  "desc-geek": {
+    "text":"The perfect caricature of the Geek who spends 25 hours a day on his computer, my passion for code often ends up carrying me away, and my more than overflowing imagination leads me to embark on projects that are more bizarre than the others.",
+    "link":"Discover my community projects"
+  }
+}

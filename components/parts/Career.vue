@@ -43,7 +43,7 @@
         <div class="flex-1">
           <h2 class="mb-2 uppercase font-semibold text-sm"><span class="text-secondary">W</span>orks</h2>
           <div class="grid sm:grid-cols-2 lg:grid-cols-1 2xl:grid-cols-2 gap-5">  
-            <nuxt-link 
+            <a 
               v-for="(project, i) in career.projects" 
               :to="{name:'projects-slug', params: {slug: project.slug} }"
               data-aos="fade-left"
@@ -61,7 +61,7 @@
                 </div> 
                 <div class="group-hover:opacity-0 group-hover:hidden delay-200 duration-300 line-clamp-1 text-">{{ project.title }}</div> 
               </div> 
-            </nuxt-link>
+            </a>
           </div>
         </div>
       </div>

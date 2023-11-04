@@ -19,7 +19,7 @@
     >
       <img v-if="activeProject" class="w-full h-full object-cover" :src="activeProject?.featured_image">
     </div>
-    <nuxt-link 
+    <a 
       @mouseout="activeProject = null"
       @mouseover="projectHovered(project)" 
       class=" flex flex-row bg-neutral relative p-3 bg-opacity-30 border border-primary border-opacity-20 group cursor-pointer" 
@@ -48,7 +48,7 @@
         <div class="mt-4 text-xs flex flex-col md:flex-row items-center gap-4">
           <div class="flex-1">
             <div class="w-48 opacity-0 group-hover:opacity-100">
-              <nuxt-link 
+              <a 
                 :to="{name:'projects-slug', params: {slug: project.slug} }"
                 title=" Voir les détails"
                 class="border block  rounded-full p-0 text-base overflow-hidden group shadow-lg " 
@@ -57,13 +57,13 @@
                   <div class="bg-white group-hover:flex-1 duration-300 transition-all p-1 text-center">
                     <Icon name="tabler:eye" class="text-xl group-hover:rotate-[360deg] duration-300 text-base-100 group-hover:text-primary" />
                   </div> 
-                  <div class="group-hover:opacity-0 group-hover:hidden delay-200 duration-300"> Voir les détails </div> 
+                  <div class="group-hover:opacity-0 group-hover:hidden delay-200 duration-300"> {{ $t('works.see-details') }} </div> 
                 </div> 
-              </nuxt-link>
+              </a>
             </div>
           </div>
           <div class="w-full hidden ">
-            Made for:
+             {{ $t('works.tags') }}
           </div>
           <div class="flex justify-center flex-wrap gap-2">
             <span class="" v-for="tag in project.tags">
@@ -73,6 +73,6 @@
           </div>
         </div>
       </div>
-    </nuxt-link>
+    </a>
   </div>
 </template>

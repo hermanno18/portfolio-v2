@@ -48,7 +48,7 @@ const socials = data.value?.filter(e=>isContactSocial(e)).reverse() || []
     </div>
     <div class="absolute w-2 h-2 rounded-full bg-primary left-10 bottom-10 hidden md:block "></div>
     <div class="absolute gap-4 left-16 bottom-10 items-center translate-y-[40%] hidden md:flex">
-      <div class="text-sm">{{ $t('index.wondered') }} <nuxt-link :to="{name: 'contacts'}" class="text-secondary">{{ $t('index.contact-me') }}</nuxt-link> {{ $t('index.and-more') }}</div>
+      <div class="text-sm">{{ $t('index.wondered') }} <a :to="{name: 'contacts'}" class="text-secondary">{{ $t('index.contact-me') }}</a> {{ $t('index.and-more') }}</div>
       <div class="bg-primary opacity-50 w-5 h-2 rounded-full"></div>
     </div>
     <div class="absolute -z-[1]  ">
@@ -70,10 +70,10 @@ const socials = data.value?.filter(e=>isContactSocial(e)).reverse() || []
           <p class="-3 text-base sm:text-lg ">{{ $t('index.wellcome') }}</p>
           <p></p>
         </div>
-        <div class="relative flex justify-center pt-4">
-          <nuxt-link :to="{name:'about'}" class="scroll-down bottom-0 mt-5 text-3xl">
-            <Icon name="bi:linkedin"/>
-          </nuxt-link>
+        <div class="relative flex justify-center pt-4 mt-12">
+          <a :to="{name:'about'}" class="scroll-down bottom-0 mt-5 text-3xl">
+            <Icon name="bi:rocket"/>
+          </a>
         </div>
       </div>
     </div>
@@ -128,18 +128,18 @@ const socials = data.value?.filter(e=>isContactSocial(e)).reverse() || []
 
 /*animated scroll arrow animation*/
 @-webkit-keyframes fade_move_down {
-  0%   { -webkit-transform:translate(0,-10px); opacity: 0;  }
+  0%   { -webkit-transform:translate(0, 10px); opacity: 0;  }
   50%  { opacity: 1;  }
-  100% { -webkit-transform:translate(0,10px); opacity: 0; }
+  100% { -webkit-transform:translate(0,-10px); opacity: 0; }
 }
 @-moz-keyframes fade_move_down {
-  0%   { -moz-transform:translate(0,-10px); opacity: 0;  }
+  0%   { -moz-transform:translate(0,10px); opacity: 0;  }
   50%  { opacity: 1;  }
-  100% { -moz-transform:translate(0,10px); opacity: 0; }
+  100% { -moz-transform:translate(0,-10px); opacity: 0; }
 }
 @keyframes fade_move_down {
-  0%   { transform:translate(0,-10px); opacity: 0;  }
+  0%   { transform:translate(0,10px); opacity: 0;  }
   50%  { opacity: 1;  }
-  100% { transform:translate(0,10px); opacity: 0; }
+  100% { transform:translate(0,-10px); opacity: 0; }
 }
 </style>

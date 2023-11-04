@@ -9,7 +9,7 @@ import time from './time.json'
 export default {
   "name": "Hermann FOKOU",
   "pseudo":"Hermanno18",
-  "me": 'moi',
+  "me": 'me',
   "back-to-home": "Rentrer à l'accueil",
   "page-404":"Houlaaa... je n'ai pas codé la page que tu recherches là. \n essayes de m'en faire part en me contactant.",
   "page-500":"Hummm.... une erreur insoupçonée s'est produite.",

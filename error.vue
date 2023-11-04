@@ -10,7 +10,7 @@ const handleError = () => clearError({ redirect: '/' })
   <div class="error-body h-screen w-screen">
       <div
         id="sky"
-        class="fixed z-50 top-0 h-screen w-screen flex justify-center items-center"
+        class=" fixed z-50 top-0 h-screen w-screen flex justify-center items-center"
       >
         <div
           class="hidden flex-col items-center justify-center text-white w-screen h-screen md:flex"
@@ -25,18 +25,16 @@ const handleError = () => clearError({ redirect: '/' })
               {{ error.statusCode }}
             </h2>
           </Tilt>
-          <h1 class="font-mono text-white z-50 text-5xl">
-            <span v-if="error.statusCode == 500">{{ $t('errors_page.error_500') }}</span>
-            <span v-if="error.statusCode == 404">{{ $t('errors_page.error_404') }}</span>
+          <h1 class="font-mono text-white z-50 text-xl max-w-md text-center">
+            <span v-if="error.statusCode == 500">{{ $t('page-500') }}</span>
+            <span v-if="error.statusCode == 404">{{ $t('page-404') }}</span>
           </h1>
           <h5>
-            <nuxt-link
-              @click="handleError"
-              class="mt-10 space cursor-pointer z-50 flex-col justify-center items-center flex pt-4 px-8 rounded-md btn-secondary transform duration-150 ease-in hover:text-white hover:scale-105"
-            >
-                <!-- DON T FORGET TO CHANGE THE IMG -->
-                {{ $t('errors_page.back_to_home') }}
-            </nuxt-link>
+            <div class="mt-12 flex justify-center gap-6 items-center" >
+              <Icon class="text-3xl -rotate-90" name="material-symbols:expand-circle-down-outline-rounded" />
+              <a href="/" class="uppercase text-sm py-3 px-9 border border-primary w-fit rounded-full hover:text-white hover:bg-primary hover:border-white ">{{ $t('back-to-home') }}</a>
+              <Icon class="text-3xl rotate-90" name="material-symbols:expand-circle-down-outline-rounded" />
+            </div>
           </h5>
         </div>
       </div>

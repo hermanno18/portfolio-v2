@@ -10,8 +10,8 @@
         Is it my fault or it's the networ ? i'm on it. <br>  By there, you can :
       </h5>
       <div class="flex gap-12 flex-wrap items-center justify-center mt-6">
-        <nuxt-link :to="'/'" class="uppercase text-sm py-1 px-6 border border-primary w-fit rounded-full">Go to homePage</nuxt-link>
-        <nuxt-link @click="router.go()" class="uppercase cursor-pointer text-sm py-1 px-6 border border-primary w-fit rounded-full">Reload this page</nuxt-link>
+        <a :to="'/'" class="uppercase text-sm py-1 px-6 border border-primary w-fit rounded-full">Go to homePage</a>
+        <a @click="router.go()" class="uppercase cursor-pointer text-sm py-1 px-6 border border-primary w-fit rounded-full">Reload this page</a>
       </div>
     </slot>
   </div>

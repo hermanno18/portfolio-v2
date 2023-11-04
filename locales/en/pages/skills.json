@@ -1,0 +1,12 @@
+{
+  "title":"Skills of {name}",
+  "desc": "I try to make them grow every day.",
+  "trans-title": "My Skills.",
+  "titles": {
+    "web-dev": "Web Development",
+    "mob-dev": "Mobile Development",
+    "devops": "DevOps",
+    "design": "Graphic Design",
+    "others": "Others"
+  }
+}
