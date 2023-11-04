@@ -25,14 +25,14 @@ const handleError = () => clearError({ redirect: '/' })
               {{ error.statusCode }}
             </h2>
           </Tilt>
-          <h1 class="font-mono text-white z-50 text-xl max-w-md text-center">
+          <h1 class="font-mono text-white z-50 text-xl">
             <span v-if="error.statusCode == 500">{{ $t('page-500') }}</span>
             <span v-if="error.statusCode == 404">{{ $t('page-404') }}</span>
           </h1>
           <h5>
             <div class="mt-12 flex justify-center gap-6 items-center" >
               <Icon class="text-3xl -rotate-90" name="material-symbols:expand-circle-down-outline-rounded" />
-              <a href="/" class="uppercase text-sm py-3 px-9 border border-primary w-fit rounded-full hover:text-white hover:bg-primary hover:border-white ">{{ $t('back-to-home') }}</a>
+              <nuxt-link :to="{name:'index'}" class="uppercase  text-sm py-3 px-9 border border-primary w-fit rounded-full hover:text-white hover:bg-primary hover:border-white transtion-all duration-200">{{ $t('back-to-home') }}</nuxt-link>
               <Icon class="text-3xl rotate-90" name="material-symbols:expand-circle-down-outline-rounded" />
             </div>
           </h5>

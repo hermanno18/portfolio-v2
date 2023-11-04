@@ -15,10 +15,10 @@ router.afterEach((to, from)=>{
     <div class=" text-center flex flex-col gap-y-8 w-fit">
       <!-- {{ route.meta.title }}: -->
       <h2 class="text-6xl uppercase">
-        {{ $t(route.meta?.title || 'Hop Transition !') }}
+        {{ $t(route.meta?.title || 'Hop Téléportation !') }}
       </h2>
       <h4 class="text-3xl">
-        -- {{ $t(route.meta?.description || "Il y a beaucoup d'amour dans la page où tu vas !") }} --
+        -- {{ $t(route.meta?.description || "L'univers est infini, comme le savoir que je veux aquerir !") }} --
       </h4>
     </div>
   </div>

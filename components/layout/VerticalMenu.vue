@@ -6,14 +6,14 @@
 
 <template>
   <div class="hidden sticky top-16  h-fit right-0 md:flex flex-col gap-2 uppercase text-xl">
-    <a 
+    <nuxt-link 
       to="/" 
       class="w-fit ml-auto px-1 pb-4 block hover:text-primary duration-150 delay-150 transition-all"
       :class="route.name == 'index' ? 'text-secondary underline underline-offset-8' : ''"  
     >
       <Icon name="material-symbols:other-houses-outline-rounded" class="text-2xl text-end"  />
-    </a>
-    <a 
+    </nuxt-link>
+    <nuxt-link 
       class="group overflow-hidden h-fit flex justify-end cursor-pointer uppercase" 
       v-for="item in menuItems"
       :to="{name: item.route}"
@@ -30,6 +30,6 @@
           <Icon name="material-symbols:arrow-circle-left-outline" class="text-lg ml-3 text-transparent group-hover:text-primary duration-150 delay-150 transition-all  ease-linear"  />
       </div>
       </div>
-    </a>
+    </nuxt-link>
   </div>
 </template>

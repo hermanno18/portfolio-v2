@@ -17,18 +17,18 @@
 
 <template>
   <div class="flex justify-between md:gap-5 items-center z-[500] fixed w-full  bg-transparent backdrop-blur-sm pt-3 md:pt-6 px-1">
-    <a to="/" class="flex">
+    <nuxt-link to="/" class="flex">
       &lt;
       <span class="text-primary hidden md:block">H</span>
       <span class="hidden md:block">ermann</span>
       <span class="text-primary">F</span>
       <span>okou</span>
       <span>/></span>
-    </a>
+    </nuxt-link>
     <div class="flex items-center gap-3 md:gap-9 h-full px-3 w-max">
-      <a :to="{name: 'shell-mode'}" class="hover:text-primary" title="shell mode">
+      <nuxt-link :to="{name: 'shell-mode'}" class="hover:text-primary" title="shell mode">
         <icon name="tabler:brand-powershell"  class="text-3xl "/> 
-      </a>
+      </nuxt-link>
       <label class="container" title="toggle theme">
         <input checked="checked" type="checkbox" v-model="isLightMode" @change="()=>{
           toggleTheme()
@@ -39,13 +39,13 @@
       </label>
       <div class="flex  ">
         <template v-for="(lang, i) in i18nCompLanguages">
-          <a 
+          <nuxt-link 
             class="px-4 flex flex-row items-center border border-gray-300 text-sm font-medium   focus:outline-none transition-all duration-300 ease-in-out"
             :class="`${i===0 ? 'rounded-l-full' : ' rounded-r-full'} ${($i18n.locale === lang.i18nLang) ? 'bg-primary text-white' : 'hover:bg-secondary hover:text-white'}`"
             @click="$i18n.locale=lang.i18nLang"
           >
             <span class="text-md capitalize">{{ lang.i18nLang }}</span>
-          </a>
+          </nuxt-link>
         </template>
       </div>
       <div class="w-12  aspect-square rounded-full bg-white"></div>

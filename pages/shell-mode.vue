@@ -69,8 +69,8 @@
         type: '',
         content: `
         <div class="flex gap-3">
-          <a class="hover:underline" href="tel:+237699167012">+237 699167012</a>  <span>|</span>
-          <a class="hover:underline" href="mailto:hermann18pavel@gmail.com">hermann18pavel@gmail.com</a>
+          <a class="hover:underline" href="tel:+237620294437">+237 620294437 </a>  <span>|</span>
+          <a class="hover:underline" href="mailto:contact.hermann-fokou.com">contact.hermann-fokou.com</a> <span>|</span>
           <a class="hover:underline" href="https://t.me/hermanno18">telegram/@Hermanno18</a>
         </div>
         `
@@ -169,7 +169,7 @@
           </span>
         </span>
         <input v-model="prompInput" type="text" name="input" id="input" autofocus autocomplete="off" class="border-none outline-none bg-transparent flex-1" @input="inputEvent">
-        <a id='nuxt-link'></a>
+        <nuxt-link id='nuxt-link'></nuxt-link>
       </form>
     </div>
   </label>

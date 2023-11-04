@@ -19,7 +19,7 @@
     >
       <img v-if="activeProject" class="w-full h-full object-cover" :src="activeProject?.featured_image">
     </div>
-    <a 
+    <nuxt-link 
       @mouseout="activeProject = null"
       @mouseover="projectHovered(project)" 
       class=" flex flex-row bg-neutral relative p-3 bg-opacity-30 border border-primary border-opacity-20 group cursor-pointer" 
@@ -48,7 +48,7 @@
         <div class="mt-4 text-xs flex flex-col md:flex-row items-center gap-4">
           <div class="flex-1">
             <div class="w-48 opacity-0 group-hover:opacity-100">
-              <a 
+              <nuxt-link 
                 :to="{name:'projects-slug', params: {slug: project.slug} }"
                 title=" Voir les détails"
                 class="border block  rounded-full p-0 text-base overflow-hidden group shadow-lg " 
@@ -59,7 +59,7 @@
                   </div> 
                   <div class="group-hover:opacity-0 group-hover:hidden delay-200 duration-300"> {{ $t('works.see-details') }} </div> 
                 </div> 
-              </a>
+              </nuxt-link>
             </div>
           </div>
           <div class="w-full hidden ">
@@ -73,6 +73,6 @@
           </div>
         </div>
       </div>
-    </a>
+    </nuxt-link>
   </div>
 </template>
