@@ -17,7 +17,11 @@
     description: 'career.desc',
   });
 
-np
+  const { data, pending, error, refresh } = await useAsyncData(
+    'companies-list',
+    () => $fetch(`/api/companies`)
+  )
+  
   const careers = data.value
   if(careers) careers.sort((a,b)=> b.start_date - a.start_date)
 
