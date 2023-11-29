@@ -12,4 +12,5 @@ export const isWhiteTheme = () => {
   if(process.client) {
     return localStorage.getItem('hermann-portfolio-theme') === 'winter'
   }
+  return false
 }

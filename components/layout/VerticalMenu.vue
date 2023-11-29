@@ -1,7 +1,6 @@
 <script setup>
   import {menuItems} from '~/components/layout/static/menuItems';
   const route = useRoute()
-  console.log('menuItems', menuItems)
 </script>
 
 <template>

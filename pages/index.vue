@@ -1,11 +1,5 @@
 <script setup>
 
-onMounted(()=>{
-  window.addEventListener('storage', (event) => {
-    isLight.value = isWhiteTheme()
-  }, false)
-})
-
 import { useI18n } from 'vue-i18n';
 
 const {t} = useI18n()
@@ -23,6 +17,12 @@ definePageMeta({
 
 
 const isLight = ref(isWhiteTheme())
+
+onMounted(()=>{
+  window.addEventListener('storage', (event) => {
+    isLight.value = isWhiteTheme()
+  }, false)
+})
 
 const { data, pending, error, refresh } = await useAsyncData(
   'contacts-list',
