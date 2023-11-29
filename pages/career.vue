@@ -28,7 +28,6 @@
 </script>
 <template>
   <div class="wh-full container mx-auto px-5 lg:px-10 ">
-    {{ error }}
     <template v-if="!error">
       <template
         v-for="(career, i) in careers"
