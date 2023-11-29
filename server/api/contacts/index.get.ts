@@ -1,3 +1,4 @@
+
 export default defineEventHandler(async (event) => {
   // handle GET requests for the `api/foo` endpoint
   const API_URL = useRuntimeConfig(event).apiBaseUrl
@@ -6,8 +7,8 @@ export default defineEventHandler(async (event) => {
   await $fetch(`${API_URL}/${contactsEndpoint}`).then((res)=>{
     contacts = res
   })
-  .catch(()=>{
-
+  .catch((e)=>{
+    console.error(e)
   })
   return contacts
 })
