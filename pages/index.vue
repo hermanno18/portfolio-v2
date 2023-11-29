@@ -36,6 +36,7 @@ const socials = data.value?.filter(e=>isContactSocial(e)).reverse() || []
   <div  class=" fixed top-0 left-0 h-screen w-screen flex items-center justify-center text-center  overflow-hidden ">
     <div class="absolute  md:left-10 bottom-16 ">
       <div class="text-center gap-4 flex md:flex-col items-center md:-translate-x-[40%]  ">
+        ##{{ error }}
         <template
           v-for="(social, i) in socials"
         >
