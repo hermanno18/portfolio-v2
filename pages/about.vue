@@ -55,11 +55,10 @@
               <h4 class="text-2xl text-primary mb-2">{{ $t('pseudo') }}</h4>
               <p> {{ $t('about.desc-geek.text') }} </p>
               <p class="mt-5 text-sm gap-2 flex flex-col">
-                <a href="https://twins-art.vercel.app" target="_blank
-                " class=" group-hover:text-primary italic underline underline-offset-4 hover:underline-offset-2 transition-all duration-150 ">
+                <nuxt-link :to="{name:'projects'}" class=" group-hover:text-primary italic underline underline-offset-4 hover:underline-offset-2 transition-all duration-150 ">
                   <span> {{ $t('about.desc-geek.link2') }} </span>
                   <span class="ml-3"><Icon name="material-symbols:arrow-forward" class="text-sm group-hover:rotate-[360deg] duration-300 text-primary group-hover:text-white  group-hover:bg-primary rounded-full" /></span>
-                </a>
+                </nuxt-link>
               </p>
             </div>
           </div>
