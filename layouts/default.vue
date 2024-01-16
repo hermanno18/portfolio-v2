@@ -13,7 +13,6 @@ router.afterEach((to, from)=>{
 <template>
   <div id="transitionner" class="bg-neutral border-t-2 fixed z-[99999999999999999] transition-all duration-500 overflow-hidden -bottom-[120%]  h-screen w-screen flex items-center justify-center">
     <div class=" text-center flex flex-col gap-y-8 w-fit">
-      <!-- {{ route.meta.title }}: -->
       <h2 class="text-6xl uppercase">
         {{ $t(route.meta?.title || 'Hop Téléportation !') }}
       </h2>

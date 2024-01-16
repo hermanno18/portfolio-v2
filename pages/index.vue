@@ -65,10 +65,10 @@ const socials = data.value?.filter(e=>isContactSocial(e)).reverse() || []
           <p class="mb-5">
             {{ $t('index.hello') }}  🙃 
           </p>
-          <p>{{ $t('index.im') }} <span class="text-info">Hermann FOKOU</span>,</p>
+          <p>{{ $t('index.im') }} <nuxt-link :to="{name: 'about'}" class="text-info">Hermann FOKOU</nuxt-link>,</p>
           <p class=" mt-3 text-xl sm:text-lg">{{ $t('index.desc') }} <br class=sm:hidden> {{ $t('index.desc2') }}</p>
-          <p class="-3 text-base sm:text-lg ">{{ $t('index.wellcome') }}</p>
-          <p></p>
+          
+          <p class="mt-5 text-base sm:text-lg ">{{ $t('index.wellcome') }}</p>
         </div>
         <div class="relative flex justify-center pt-4 mt-12">
           <nuxt-link :to="{name:'about'}" class="scroll-down bottom-0 mt-5 text-3xl">

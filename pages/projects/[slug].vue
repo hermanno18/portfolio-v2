@@ -28,12 +28,12 @@ const project = data
 <input type="checkbox" id="my_modal_7" class="modal-toggle" />
 <div class="modal bg-base-100 bg-opacity-70  backdrop-blur-sm">
   <div class="modal-box bg-neutral max-w-7xl aspect-video p-0 rounded relative ">
-      <img src="https://placehold.co/1080x800?text=Hello+World" class="w-full h-full object-center object-fill  " alt="">
+      <img :src="project.featured_image"  class="w-full h-full object-center object-fill  " alt="">
   </div>
   <label class="modal-backdrop h-full w-full  absolute -z-10" for="my_modal_7"></label>
 </div>
     <div v-if="isModalOpen" class="fixed flex p-16 h-screen w-screen bg-neutral bg-opacity-50 top-0 right-0 z-[9999999999]" @click="toggleModal(false)">
-      <img class="w-full object-contain" src="https://placehold.co/2400x1000?text=Hello+World" alt="">
+      <img class="w-full object-contain" :src="project.featured_image"  alt="">
     </div>
     <div class="h-full w-full bg-neutral bg-opacity-50 relative">
       <div class="w-1/3 border-b-2 -left-3 -top-[1px] absolute z-50 border-primary"></div>
@@ -63,7 +63,7 @@ const project = data
           </div>
           <div class="w-full lg:flex mt-9 flex-1 ">
             <div class="lg:w-1/2 flex flex-col gap-9 mb-3">
-              <p class="leading-9 opacity-60 text-xl text-justify" v-html="project.content"></p>
+              <p class="leading-9 opacity-60 text-xl " v-html="project.content"></p>
               <p class="flex flex-wrap gap-5">
                 <template v-for="tag in project.tags">
                   <span class="text-xs"> <span class="text-primary">#</span> {{ tag }}</span>

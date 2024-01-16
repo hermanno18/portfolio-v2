@@ -25,6 +25,12 @@ html {
 }
 
 body {
+  p {
+    line-height: 1.9rem ;
+    text-wrap: pretty;
+  }
+  letter-spacing: 0.2rem;
+  word-spacing: 0.25rem;
   @apply h-screen w-full !overflow-x-hidden
 }
 body > div#__nuxt {
