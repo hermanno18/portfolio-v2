@@ -73,7 +73,7 @@ const project = data
             <div class="lg:w-1/2 flex lg:justify-end items-center bg-red-500 mybox border-2 group border-primary cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out opacity-60 hover:opacity-100 w-full aspect-video">
               <div class="bg-neutral  h-full w-full ">
                 <label for="my_modal_7" class="btn h-full w-full">
-                  <img :src="project.featured_image" class="w-full h-full object-center object-fill opacity-30 group-hover:opacity-100 transtion-all duration-300 " alt="">
+                  <img :src="project.featured_image" class="w-full h-full object-center object-cover opacity-30 group-hover:opacity-100 transtion-all duration-300 " alt="">
                 </label>
               </div>
             </div>
