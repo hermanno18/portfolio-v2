@@ -29,7 +29,7 @@ const { data, pending, error, refresh } = await useAsyncData(
   () => $fetch(`/api/contacts/`)
 )
 
-const socials = data.value?.filter(e=>isContactSocial(e)).reverse() || []
+const socials = data.value || []
 
 </script>
 <template>

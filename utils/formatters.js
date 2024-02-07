@@ -6,5 +6,5 @@ export const formatDate = (value, locale='en', formatting = { month: 'short',  y
 }
 
 export const isContactSocial = (e) => {
-  return e.title.toLowerCase() != 'email' && e.title.toLowerCase() != 'whatsapp' &&  e.title.toLowerCase() != 'téléphone'
+  return e.title.toLowerCase() != 'tweeter' &&  e.title.toLowerCase() != 'telegram'
 }

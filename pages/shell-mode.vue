@@ -124,7 +124,7 @@
   
   <label id="terminal" for="input" class="p-4 h-screen w-screen  block">
     
-<pre class="text-xs" >
+    <textarea name="" id="" class="w-full h-48 bg-transparent p-0 text-sm overflow-y-hidden" readonly wrap="off" disabled>
             _______    _______    _______    _______    _          _          _______         __     _____  
 |\     /|  (  ____ \  (  ____ )  (       )  (  ___  )  ( (    /|  ( (    /|  (  ___  )       /  \   / ___ \ 
 | )   ( |  | (    \/  | (    )|  | () () |  | (   ) |  |  \  ( |  |  \  ( |  | (   ) |       \/) ) ( (___) )
@@ -134,7 +134,7 @@
 | )   ( |  | (____/\  | ) \ \__  | )   ( |  | )   ( |  | )  \  |  | )  \  |  | (___) |       __) (_( (___) )
 |/     \|  (_______/  |/   \__/  |/     \|  |/     \|  |/    )_)  |/    )_)  (_______)       \____/ \_____/ 
                                                                                                             
-</pre>
+    </textarea>
     <div ref="r" id="greetings" class="">
       <p>Hello i'm Hermann FOKOU ! Welcomme on the terminal's version of my portfolio ! Cool ! isn't it ??
       <br> Type <span class="font-semibold">'help'</span> to see available commands. </p>

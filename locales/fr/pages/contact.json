@@ -3,5 +3,13 @@
   "trans-title": "Mes contacts.",
   "desc": "Projets, sugestions, critique, je reste à votre écoute.",
   "follow-me":"Ou suivez-moi sur mes reseaux",
-  "phone":"Appels"
+  "phone":"Appels",
+  "form": {
+    "email": "Laisse ton e-mail, je te recontacte",
+    "name": "Moi c'est Hermanno18, et toi ?",
+    "message": "Allez, dis moi tout ! &nbsp &nbsp :-) ",
+    "submit": "Envoyer",
+    "success": "Merci ! je te recontacte tout de suite !",
+    "error": "Aîe aîe aîe, je n'ai pas pu envoyer ton message. SI ca persiste, contactes moi par les reseaux"
+  }
 }

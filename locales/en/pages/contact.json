@@ -3,5 +3,13 @@
   "trans-title": "My Contacts.",
   "desc": "Projects, suggestions, criticism, I remain at your disposal.",
   "follow-me":"Or follow me on my networks",
-  "phone":"Calls"
-}
+  "phone":"Calls",
+  "form": {
+    "email": "Leave me your email, i'll write you back",
+    "name": "I'm Hermanno18, and you ?",
+    "message": "tell me more about you ! &nbsp &nbsp :-) ",
+    "submit": "Send",
+    "success": "Thank's ! i'll answer you soon !",
+    "error": "Aîe aîe aîe, something went wrong. But you can still contact me on my socials !"
+  }
+} 

@@ -1,8 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
+:root {
+  --couleur-1 : #000
+}
 *{
   font-family: 'Reem Kufi';
   /* outline: 1px solid red; */
