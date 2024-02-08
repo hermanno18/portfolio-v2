@@ -3,7 +3,7 @@
     layout: "none",
   });
   const router = useRouter()
-  const hostname = computed(()=>window.location.hostname)
+  const hostname = computed(()=>window?.location?.hostname)
   const goOptions = {
     github : 'https://github.com/hermanno18',
     linkedin : 'https://www.linkedin.com/in/hermann-fokou?originalSubdomain=cm',
