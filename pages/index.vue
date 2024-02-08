@@ -3,6 +3,7 @@
 import { useI18n } from 'vue-i18n';
 
 const {t} = useI18n()
+const localePath = useLocalePath()
 
 useHead({
   meta: [
@@ -48,7 +49,7 @@ const socials = data.value || []
     </div>
     <div class="absolute w-2 h-2 rounded-full bg-primary left-10 bottom-10 hidden md:block "></div>
     <div class="absolute gap-4 left-16 bottom-10 items-center translate-y-[40%] hidden md:flex">
-      <div class="text-sm">{{ $t('index.wondered') }} <nuxt-link :to="{name: 'contacts'}" class="text-secondary">{{ $t('index.contact-me') }}</nuxt-link> {{ $t('index.and-more') }}</div>
+      <div class="text-sm">{{ $t('index.wondered') }} <nuxt-link :to="localePath({name: 'contacts'})" class="text-secondary">{{ $t('index.contact-me') }}</nuxt-link> {{ $t('index.and-more') }}</div>
       <div class="bg-primary opacity-50 w-5 h-2 rounded-full"></div>
     </div>
     <div class="absolute -z-[1]  ">
@@ -65,13 +66,13 @@ const socials = data.value || []
           <p class="mb-5">
             {{ $t('index.hello') }}  🙃 
           </p>
-          <p>{{ $t('index.im') }} <nuxt-link :to="{name: 'about'}" class="text-info">Hermann FOKOU</nuxt-link>,</p>
+          <p>{{ $t('index.im') }} <nuxt-link :to="localePath({name: 'about'})" class="text-info">Hermann FOKOU</nuxt-link>,</p>
           <p class=" mt-3 text-xl sm:text-lg">{{ $t('index.desc') }} <br class=sm:hidden> {{ $t('index.desc2') }}</p>
           
           <p class="mt-5 text-base sm:text-lg ">{{ $t('index.wellcome') }}</p>
         </div>
         <div class="relative flex justify-center pt-4 mt-12">
-          <nuxt-link :to="{name:'about'}" class="scroll-down bottom-0 mt-5 text-3xl">
+          <nuxt-link :to="localePath({name:'about'})" class="scroll-down bottom-0 mt-5 text-3xl">
             <Icon name="bi:rocket"/>
           </nuxt-link>
         </div>

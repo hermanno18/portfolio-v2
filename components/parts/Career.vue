@@ -1,4 +1,6 @@
 <script setup>
+const localePath = useLocalePath()
+
   const props = defineProps({
     career: {
       require: true,
@@ -45,7 +47,7 @@
           <div class="grid sm:grid-cols-2 lg:grid-cols-1 2xl:grid-cols-2 gap-5">  
             <nuxt-link 
               v-for="(project, i) in career.projects" 
-              :to="{name:'projects-slug', params: {slug: project.slug} }"
+              :to="localePath({name:'projects-slug', params: {slug: project.slug} })"
               data-aos="fade-left"
               :data-aos-anchor="`#career_${career.title}`"
               data-aos-duration="900"                                   

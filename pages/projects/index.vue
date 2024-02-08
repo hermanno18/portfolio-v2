@@ -2,7 +2,6 @@
   import { useI18n } from 'vue-i18n';
   import Project from '@/components/parts/Project.vue'
 
-
   const {t} = useI18n()
 
   useHead({

@@ -1,4 +1,6 @@
 <script setup>
+const localePath = useLocalePath()
+
   const props = defineProps({
     project: {
       require: true,
@@ -23,7 +25,7 @@
       @mouseout="activeProject = null"
       @mouseover="projectHovered(project)" 
       class=" flex flex-row bg-neutral relative p-3 bg-opacity-30 border border-primary border-opacity-20 group cursor-pointer" 
-      :to="{name:'projects-slug', params: {slug: project.slug} }"
+      :to="localePath({name:'projects-slug', params: {slug: project.slug} })"
     >
       <div class="w-1/3 border-b-2 -left-3 -top-[1px] absolute border-primary"></div>
       <div class="w-1/3 border-b-2 -right-3 -bottom-[1px] absolute border-primary"></div>
@@ -49,7 +51,7 @@
           <div class="flex-1">
             <div class="w-48 opacity-0 group-hover:opacity-100">
               <nuxt-link 
-                :to="{name:'projects-slug', params: {slug: project.slug} }"
+                :to="localePath({name:'projects-slug', params: {slug: project.slug} })"
                 title=" Voir les détails"
                 class="border block  rounded-full p-0 text-base overflow-hidden group shadow-lg " 
               >

@@ -1,6 +1,7 @@
 <script setup>
 import {menuItems} from '~/components/layout/static/menuItems';
   const route = useRoute()
+  const localePath = useLocalePath()
 
   const mobileMenuContainer = ref('mobileMenuContainer')
   const mobileMenuOverlay = ref("mobileMenuOverlay")
@@ -56,7 +57,7 @@ import {menuItems} from '~/components/layout/static/menuItems';
           `" 
         >
           <nuxt-link 
-            :to="item.route"
+            :to="localePath(item.route)"
             @click="closeMenu"
             class="w-full h-fit text-center absolute border shadow shadow-white rounded-full px-1 transition-all duration-300 hover:text-primary hover:border-primary hover:shadow-primary focus:text-primary focus:border-primary focus:shadow-primary"
             :class="`
@@ -73,7 +74,7 @@ import {menuItems} from '~/components/layout/static/menuItems';
         <div class="flex relative items-center justify-start" v-for="item in menuItems.slice(4,5)">
           <nuxt-link 
             @click="closeMenu"
-            :to="item.route"
+            :to="localePath(item.route)"
             class="w-full h-fit text-center absolute border shadow shadow-white rounded-full px-1 transition-all duration-300 hover:text-primary hover:border-primary hover:shadow-primary focus:text-primary focus:border-primary focus:shadow-primary"
           >
             {{ $t(item.title) }}

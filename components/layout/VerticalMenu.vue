@@ -1,6 +1,8 @@
 <script setup>
   import {menuItems} from '~/components/layout/static/menuItems';
   const route = useRoute()
+  const localePath = useLocalePath()
+
 </script>
 
 <template>
@@ -15,7 +17,7 @@
     <nuxt-link 
       class="group overflow-hidden h-fit flex justify-end cursor-pointer uppercase" 
       v-for="item in menuItems"
-      :to="{name: item.route}"
+      :to="localePath({name: item.route})"
     >
       <div 
         class="right-0 rotate-90 w-fit aspect-square  group-hover:!text-primary  group-hover:items-center group-hover:rotate-0 duration-300 transition-all"

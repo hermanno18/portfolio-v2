@@ -18,16 +18,16 @@ const handleError = () => clearError({ redirect: '/' })
           <div id="stars" class="self-start z-30"></div>
           <div id="stars2" class="self-start z-40"></div>
           <div id="stars3" class="self-start z-20"></div>
-          <Tilt
+          <div
             class="h-72 w-72 bg-primary bg-opacity-40 border border-secondary rounded-full p-500 flex items-center justify-center mb-5"
           >
             <h2 class="text-9xl text-secondary font-extrabold font-mono errorcode">
-              {{ error.statusCode }}
+              {{ error?.statusCode }}
             </h2>
-          </Tilt>
+          </div>
           <h1 class="font-mono text-white z-50 text-xl">
-            <span v-if="error.statusCode == 500">{{ $t('page-500') }}</span>
-            <span v-if="error.statusCode == 404">{{ $t('page-404') }}</span>
+            <span v-if="error?.statusCode == 500">{{ $t('page-500') }}</span>
+            <span v-if="error?.statusCode == 404">{{ $t('page-404') }}</span>
           </h1>
           <h5>
             <div class="mt-12 flex justify-center gap-6 items-center" >

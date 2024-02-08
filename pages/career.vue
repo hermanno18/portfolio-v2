@@ -21,7 +21,11 @@
     'companies-list',
     () => $fetch(`/api/companies`)
   )
-  
+//   defineI18nRoute({
+//   paths: {
+//     fr: '/carrière',
+//   }
+// })
   const careers = data.value
   if(careers) careers.sort((a,b)=> b.start_date - a.start_date)
 
